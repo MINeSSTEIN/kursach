@@ -5,10 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Kursach.Res.Pages.Buttons"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="720" d:DesignWidth="256"
       Title="ButtonsNoUser">
 
     <Grid>
-        
+        <StackPanel>
+            <Button x:Name="btnMain" Content="Главная"/>
+        </StackPanel>
     </Grid>
 </Page>
