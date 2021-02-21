@@ -12,5 +12,6 @@
             <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
         <Frame x:Name="fMain" NavigationUIVisibility="Hidden" Grid.Column="1"/>
+        <Frame x:Name="fButtons" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
