@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:Kursach"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="MenuButtons" TargetType="Button">
+            <Setter Property="Margin" Value="0,0,0,0"/>
+        </Style>
     </Application.Resources>
 </Application>
