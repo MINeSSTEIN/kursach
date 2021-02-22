@@ -4,7 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="697d9eaf6ee44180929a3f2d277e5bcc" Name="Diagram1" />
+      <Diagram DiagramId="697d9eaf6ee44180929a3f2d277e5bcc" Name="Diagram1" >
+        <EntityTypeShape EntityType="Restraunt_DB_Model.Dishes" Width="1.5" PointX="3.375" PointY="0.625" />
+        <EntityTypeShape EntityType="Restraunt_DB_Model.Dishes_Type" Width="1.5" PointX="1.125" PointY="1" />
+        <EntityTypeShape EntityType="Restraunt_DB_Model.sysdiagrams" Width="1.5" PointX="1.125" PointY="4.5" />
+        <AssociationConnector Association="Restraunt_DB_Model.FK_Dishes_Dishes_Type" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

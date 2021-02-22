@@ -25,5 +25,8 @@ namespace Kursach
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Dishes> Dishes { get; set; }
+        public virtual DbSet<Dishes_Type> Dishes_Type { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }
