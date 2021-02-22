@@ -9,9 +9,10 @@
       Title="ButtonsNoUser">
 
     <Grid>
+        
         <StackPanel>
-            <Button x:Name="btnMain" Content="Главная"/>
-            <Button x:Name="btnDishesView" Content="Сделать заказ"/>
+            <Button x:Name="btnMain" Content="Главная" Click="btnMain_Click"/>
+            <Button x:Name="btnDishesView" Content="Сделать заказ" Click="btnDishesView_Click"/>
         </StackPanel>
     </Grid>
 </Page>

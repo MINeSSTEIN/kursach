@@ -1,7 +1,5 @@
 ﻿using System.Windows;
-using Kursach.Res.Classes.ObjectsVisibility;
-using Kursach.Res;
-  
+using Kursach.Res.Classes.ObjectsVisibility;  
 
 namespace Kursach
 {
