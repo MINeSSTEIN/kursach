@@ -11,6 +11,7 @@
     <Grid>
         <StackPanel>
             <Button x:Name="btnMain" Content="Главная"/>
+            <Button x:Name="btnDishesView" Content="Сделать заказ"/>
         </StackPanel>
     </Grid>
 </Page>
