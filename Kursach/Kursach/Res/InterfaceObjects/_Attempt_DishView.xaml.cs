@@ -23,7 +23,6 @@ namespace Kursach.Res.InterfaceObjects
         public _Attempt_DishView()
         {
             InitializeComponent();
-            Label name = lName;
         }
 
     }

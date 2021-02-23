@@ -24,15 +24,20 @@ namespace Kursach.Res.Pages.NoUser
         public DishesBrowser()
         {
             InitializeComponent();
-            InterfaceObjects._Attempt_DishView vi = new InterfaceObjects._Attempt_DishView();
-            vi.lName.Content = "Здесь будет имя";
-            Res.Classes.ObjectsVisibility.EntityVision.e.Dishes.Load();
-            DataGrid nota = new DataGrid();
-            Classes.ObjectsVisibility.EntityVision.e.Dishes.Local.ToBindingList();
-            nota.ItemsSource = Classes.ObjectsVisibility.EntityVision.e.Dishes.Local.ToBindingList();
-            vi.lName.Content = nota.Name.FirstOrDefault();
-            a.Navigate(vi);
 
+            DataGrid nota = new DataGrid(); //По приколу создаем "виртуальную" таблицу чтобы пихнуть туда блюда из базы
+
+            Classes.ObjectsVisibility.EntityVision.e.Dishes.Load();//Загружаем таблицу с блюдами из базы данных
+            nota.ItemsSource = Classes.ObjectsVisibility.EntityVision.e.Dishes.Local.ToBindingList(); //Таки пихаем данные из таблицы в таблицу (хвахывхаыва)
+            List<InterfaceObjects._Attempt_DishView> lViews = new List<InterfaceObjects._Attempt_DishView>();
+
+
+            for (int i = 0; i < nota.Items.Count - 1; i++)
+            {
+                lViews.Add(new InterfaceObjects._Attempt_DishView());
+                lViews[i].lName.Content = Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Name.ToString();
+                wpDishes.Children.Add(lViews[i]);
+            }
         }
     }
 }

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Kursach.Res.InterfaceObjects"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="265">
-    <Grid>
+    <Grid Background="Gray">
         <Label Content="*Name" x:Name="lName"/>
         <Label Content="*Price" x:Name="lPrice" Margin="0, 20, 0, 0"/>
         <Label Content="*Weight" x:Name="lWeight" Margin="0, 40, 0, 0"/>

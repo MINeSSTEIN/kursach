@@ -9,8 +9,8 @@
       Title="DishesBrowser">
 
     <Grid>
-        <StackPanel x:Name="spDishes">
-            <Frame x:Name="a"/>
-        </StackPanel>
+        <WrapPanel x:Name="wpDishes">
+            
+        </WrapPanel>
     </Grid>
 </Page>

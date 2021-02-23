@@ -6,7 +6,6 @@ C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\EntityFramewor
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\EntityFramework.xml
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\ru\EntityFramework.resources.dll
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.csprojAssemblyReference.cache
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\MainWindow.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\Buttons\ButtonsNoUser.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\Main.g.cs
@@ -29,3 +28,5 @@ C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\DishesBrowser.baml
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\_Attempt_DishView.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\_Attempt_DishView.baml
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.csprojAssemblyReference.cache
