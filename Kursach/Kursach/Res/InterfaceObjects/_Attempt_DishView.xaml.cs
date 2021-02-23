@@ -23,6 +23,7 @@ namespace Kursach.Res.InterfaceObjects
         public _Attempt_DishView()
         {
             InitializeComponent();
+            this.Margin = new Thickness(5, 5, 5, 5);
         }
 
     }

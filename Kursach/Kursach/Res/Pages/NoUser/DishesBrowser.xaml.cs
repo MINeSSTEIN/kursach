@@ -35,7 +35,10 @@ namespace Kursach.Res.Pages.NoUser
             for (int i = 0; i < nota.Items.Count - 1; i++)
             {
                 lViews.Add(new InterfaceObjects._Attempt_DishView());
+                decimal t_price = Math.Round(Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Price, 2);
                 lViews[i].lName.Content = Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Name.ToString();
+                lViews[i].lPrice.Content = $"{t_price.ToString()} p.";
+                lViews[i].lWeight.Content = $"{Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Weight.ToString()} г.";
                 wpDishes.Children.Add(lViews[i]);
             }
         }
