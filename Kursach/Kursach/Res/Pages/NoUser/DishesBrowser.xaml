@@ -9,6 +9,8 @@
       Title="DishesBrowser">
 
     <Grid>
-        
+        <StackPanel x:Name="spDishes">
+            <Frame x:Name="a"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -27,3 +27,5 @@ C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.exe
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.pdb
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\DishesBrowser.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\DishesBrowser.baml
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\_Attempt_DishView.g.cs
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\_Attempt_DishView.baml

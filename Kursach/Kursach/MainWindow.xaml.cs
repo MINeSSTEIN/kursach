@@ -13,9 +13,12 @@ namespace Kursach
             InitializeComponent();
             Res.Classes.ObjectsVisibility.FrameVision.f = fMain;
             Res.Classes.ObjectsVisibility.btnsFrameVision.f = fButtons;
+            
 
             FrameVision.f.Navigate(new Res.Pages.NoUser.Main());
             btnsFrameVision.f.Navigate(new Res.Pages.Buttons.ButtonsNoUser());
+
+
         }
     }
 }
