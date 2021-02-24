@@ -88,6 +88,9 @@
     <Compile Include="Res\Classes\ObjectsVisibility\btnsFrameVision.cs" />
     <Compile Include="Res\Classes\ObjectsVisibility\EntityVision.cs" />
     <Compile Include="Res\Classes\ObjectsVisibility\FrameVision.cs" />
+    <Compile Include="Res\InterfaceObjects\DishView.xaml.cs">
+      <DependentUpon>DishView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Res\InterfaceObjects\_Attempt_DishView.xaml.cs">
       <DependentUpon>_Attempt_DishView.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Res\InterfaceObjects\DishView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Res\InterfaceObjects\_Attempt_DishView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
