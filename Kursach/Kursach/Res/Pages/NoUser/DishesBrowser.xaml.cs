@@ -29,17 +29,17 @@ namespace Kursach.Res.Pages.NoUser
 
             Classes.ObjectsVisibility.EntityVision.e.Dishes.Load();//Загружаем таблицу с блюдами из базы данных
             nota.ItemsSource = Classes.ObjectsVisibility.EntityVision.e.Dishes.Local.ToBindingList(); //Таки пихаем данные из таблицы в таблицу (хвахывхаыва)
-            List<InterfaceObjects._Attempt_DishView> lViews = new List<InterfaceObjects._Attempt_DishView>();
+            List<InterfaceObjects._Attempt_DishView> lViews = new List<InterfaceObjects._Attempt_DishView>(); //Делаем коллекцию с кастомным элементом управления
 
 
-            for (int i = 0; i < nota.Items.Count - 1; i++)
+            for (int i = 0; i < nota.Items.Count - 1; i++) //ну в цикле все +/- понятно, но стоит все равно объяснить
             {
-                lViews.Add(new InterfaceObjects._Attempt_DishView());
-                decimal t_price = Math.Round(Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Price, 2);
-                lViews[i].lName.Content = Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Name.ToString();
-                lViews[i].lPrice.Content = $"{t_price.ToString()} p.";
-                lViews[i].lWeight.Content = $"{Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Weight.ToString()} г.";
-                wpDishes.Children.Add(lViews[i]);
+                lViews.Add(new InterfaceObjects._Attempt_DishView()); //Добавляем новый элемент в коллекцию
+                decimal t_price = Math.Round(Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Price, 2); //Округляем циферки в цене
+                lViews[i].lName.Content = Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Name.ToString(); //Задаем имя...
+                lViews[i].lPrice.Content = $"{t_price.ToString()} p."; //...цену...
+                lViews[i].lWeight.Content = $"{Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Weight.ToString()} г."; //...вес
+                wpDishes.Children.Add(lViews[i]); //Ну и добавляем во врап панель только что созданный элемент
             }
         }
     }
