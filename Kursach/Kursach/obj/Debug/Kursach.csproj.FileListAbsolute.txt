@@ -30,5 +30,3 @@ C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceO
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\_Attempt_DishView.baml
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.csprojAssemblyReference.cache
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\DishView.g.cs
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\DishView.baml

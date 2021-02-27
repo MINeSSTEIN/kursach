@@ -29,12 +29,12 @@ namespace Kursach.Res.Pages.NoUser
 
             Classes.ObjectsVisibility.EntityVision.e.Dishes.Load();//Загружаем таблицу с блюдами из базы данных
             nota.ItemsSource = Classes.ObjectsVisibility.EntityVision.e.Dishes.Local.ToBindingList(); //Таки пихаем данные из таблицы в таблицу (хвахывхаыва)
-            List<InterfaceObjects.DishView> lViews = new List<InterfaceObjects.DishView>(); //Делаем коллекцию с кастомным элементом управления
+            List<InterfaceObjects._Attempt_DishView> lViews = new List<InterfaceObjects._Attempt_DishView>(); //Делаем коллекцию с кастомным элементом управления
 
 
             for (int i = 0; i < nota.Items.Count - 1; i++) //ну в цикле все +/- понятно, но стоит все равно объяснить
             {
-                lViews.Add(new InterfaceObjects.DishView()); //Добавляем новый элемент в коллекцию
+                lViews.Add(new InterfaceObjects._Attempt_DishView()); //Добавляем новый элемент в коллекцию
                 decimal t_price = Math.Round(Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Price, 2); //Округляем циферки в цене
                 lViews[i].lName.Content = Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Name.ToString(); //Задаем имя...
                 lViews[i].lPrice.Content = $"{t_price.ToString()} p."; //...цену...
