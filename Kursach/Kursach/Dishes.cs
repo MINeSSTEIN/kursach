@@ -19,6 +19,7 @@ namespace Kursach
         public decimal Price { get; set; }
         public int id_Dishes_Type { get; set; }
         public int Weight { get; set; }
+        public string PicturePath { get; set; }
     
         public virtual Dishes_Type Dishes_Type { get; set; }
     }

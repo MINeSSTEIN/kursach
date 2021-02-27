@@ -9,6 +9,7 @@
     <Property Name="Price" Type="money" Nullable="false" />
     <Property Name="id_Dishes_Type" Type="int" Nullable="false" />
     <Property Name="Weight" Type="int" Nullable="false" />
+    <Property Name="PicturePath" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Dishes_Type">
     <Key>

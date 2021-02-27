@@ -39,7 +39,8 @@ namespace Kursach.Res.Pages.NoUser
                 lViews[i].lName.Content = Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Name.ToString(); //Задаем имя...
                 lViews[i].lPrice.Content = $"{t_price.ToString()} p."; //...цену...
                 lViews[i].lWeight.Content = $"{Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Weight.ToString()} г."; //...вес
-                wpDishes.Children.Add(lViews[i]); //Ну и добавляем во врап панель только что созданный элемент
+
+
             }
         }
     }

@@ -49,6 +49,7 @@
     <Property Name="id_Dishes_Type" Type="Int32" Nullable="false" />
     <Property Name="Weight" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Dishes_Type" Relationship="Restraunt_DB_Model.FK_Dishes_Dishes_Type" FromRole="Dishes" ToRole="Dishes_Type" />
+    <Property Name="PicturePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="Dishes_Type">
     <Key>

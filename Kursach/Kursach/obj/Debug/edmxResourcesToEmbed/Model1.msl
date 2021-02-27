@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Dishes">
       <EntityTypeMapping TypeName="Restraunt_DB_Model.Dishes">
         <MappingFragment StoreEntitySet="Dishes">
+          <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
           <ScalarProperty Name="Weight" ColumnName="Weight" />
           <ScalarProperty Name="id_Dishes_Type" ColumnName="id_Dishes_Type" />
           <ScalarProperty Name="Price" ColumnName="Price" />

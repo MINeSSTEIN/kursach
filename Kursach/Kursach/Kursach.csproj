@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Res\Pages\NoUser\Auth\" />
+    <Folder Include="Res\Static\Pictures\Dishes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model1.Context.tt">

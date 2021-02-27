@@ -16,15 +16,16 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="iPic" Margin="3"/>
+        <Image x:Name="iPic" Margin="3" Source="{Binding pic}"/>
         <StackPanel Grid.Column="1">
             <Label x:Name="lName" FontSize="18"/>
             <Label x:Name="lType" FontSize="14"/>
             <Label x:Name="lWeight" FontSize="14"/>
+            <Label Content="{Binding aa}"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
             <Button x:Name="btnOrder" Margin="5">В корзину</Button>
-            <Button x:Name="btnDetails" Margin="20, 5, 5, 5" Content="Подробнее..."/>
+            <Button x:Name="btnDetails" Margin="5" Content="Подробнее..." HorizontalAlignment="Right"/>
         </StackPanel>
         <Label x:Name="lPrice" FontSize="18" Grid.Row="1"/>
     </Grid>

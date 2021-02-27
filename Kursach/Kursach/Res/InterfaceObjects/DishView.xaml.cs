@@ -20,10 +20,14 @@ namespace Kursach.Res.InterfaceObjects
     /// </summary>
     public partial class DishView : UserControl
     {
+        public string pic;
+        public string aa;
+
         public DishView()
         {
             InitializeComponent();
             this.Margin = new Thickness(10);
+            pic = @"/Res/Static/Pictures/Dishes/GrekoVostochniy.jpg";
         }
     }
 }
