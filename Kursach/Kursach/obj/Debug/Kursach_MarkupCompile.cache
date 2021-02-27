@@ -4,35 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Администратор\Documents\Шабалкин\kur\kursach\Kursach\Kursach\obj\Debug\
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\
 Kursach
 none
 false
 DEBUG;TRACE
-<<<<<<< HEAD
-<<<<<<< HEAD
-C:\Users\Администратор\Documents\Шабалкин\kur\kursach\Kursach\Kursach\App.xaml
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\App.xaml
 61188881811
 21750853300
-22-6580119
-18254106231
+21835779248
+18708499703
 MainWindow.xaml;Res\InterfaceObjects\DishView.xaml;Res\InterfaceObjects\_Attempt_DishView.xaml;Res\Pages\Buttons\ButtonsNoUser.xaml;Res\Pages\NoUser\DishesBrowser.xaml;Res\Pages\NoUser\Main.xaml;
-=======
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\App.xaml
-5-520557504
-21750853300
-20-72881408
-18708499703
-MainWindow.xaml;Res\InterfaceObjects\_Attempt_DishView.xaml;Res\Pages\Buttons\ButtonsNoUser.xaml;Res\Pages\NoUser\DishesBrowser.xaml;Res\Pages\NoUser\Main.xaml;
->>>>>>> parent of 94e010c (Добавил настоящий виджет просмотра блюд, и еще там по мелочи сделал)
-=======
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\App.xaml
-5-520557504
-21750853300
-20-72881408
-18708499703
-MainWindow.xaml;Res\InterfaceObjects\_Attempt_DishView.xaml;Res\Pages\Buttons\ButtonsNoUser.xaml;Res\Pages\NoUser\DishesBrowser.xaml;Res\Pages\NoUser\Main.xaml;
->>>>>>> parent of 94e010c (Добавил настоящий виджет просмотра блюд, и еще там по мелочи сделал)
 
-True
+False
 

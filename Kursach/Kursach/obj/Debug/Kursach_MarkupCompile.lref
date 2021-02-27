@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-﻿C:\Users\Администратор\Documents\Шабалкин\kur\kursach\Kursach\Kursach\obj\Debug\GeneratedInternalTypeHelper.g.cs
-FC:\Users\Администратор\Documents\Шабалкин\kur\kursach\Kursach\Kursach\App.xaml;;
-FC:\Users\Администратор\Documents\Шабалкин\kur\kursach\Kursach\Kursach\MainWindow.xaml;;
-FC:\Users\Администратор\Documents\Шабалкин\kur\kursach\Kursach\Kursach\Res\InterfaceObjects\DishView.xaml;;
-FC:\Users\Администратор\Documents\Шабалкин\kur\kursach\Kursach\Kursach\Res\InterfaceObjects\_Attempt_DishView.xaml;;
-FC:\Users\Администратор\Documents\Шабалкин\kur\kursach\Kursach\Kursach\Res\Pages\Buttons\ButtonsNoUser.xaml;;
-FC:\Users\Администратор\Documents\Шабалкин\kur\kursach\Kursach\Kursach\Res\Pages\NoUser\DishesBrowser.xaml;;
-FC:\Users\Администратор\Documents\Шабалкин\kur\kursach\Kursach\Kursach\Res\Pages\NoUser\Main.xaml;;
-=======
 ﻿
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\App.xaml;;
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\MainWindow.xaml;;
@@ -15,8 +5,5 @@ FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\InterfaceObjects\_A
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\Buttons\ButtonsNoUser.xaml;;
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\NoUser\DishesBrowser.xaml;;
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\NoUser\Main.xaml;;
-<<<<<<< HEAD
->>>>>>> parent of 94e010c (Добавил настоящий виджет просмотра блюд, и еще там по мелочи сделал)
-=======
->>>>>>> parent of 94e010c (Добавил настоящий виджет просмотра блюд, и еще там по мелочи сделал)
+FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\InterfaceObjects\DishView.xaml;;
 

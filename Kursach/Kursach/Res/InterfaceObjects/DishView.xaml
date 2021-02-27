@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Kursach.Res.InterfaceObjects.DishView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Kursach.Res.InterfaceObjects"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="256" 
+             >
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="iPic" Margin="3"/>
+        <StackPanel Grid.Column="1">
+            <Label x:Name="lName" FontSize="18"/>
+            <Label x:Name="lType" FontSize="14"/>
+            <Label x:Name="lWeight" FontSize="14"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+            <Button x:Name="btnOrder" Margin="5">В корзину</Button>
+            <Button x:Name="btnDetails" Margin="20, 5, 5, 5" Content="Подробнее..."/>
+        </StackPanel>
+        <Label x:Name="lPrice" FontSize="18" Grid.Row="1"/>
+    </Grid>
+</UserControl>
