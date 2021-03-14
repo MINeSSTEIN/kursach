@@ -13,6 +13,6 @@
             <WrapPanel x:Name="wpDishes">
 
             </WrapPanel>
-        </ScrollViewer>
+        </ScrollViewer> 
     </Grid>
 </Page>
