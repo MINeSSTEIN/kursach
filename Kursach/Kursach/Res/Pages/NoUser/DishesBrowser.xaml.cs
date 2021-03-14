@@ -35,17 +35,11 @@ namespace Kursach.Res.Pages.NoUser
 
             for (int i = 0; i < nota.Items.Count - 1; i++) //ну в цикле все +/- понятно, но стоит все равно объяснить
             {
-                BitmapImage bm = new BitmapImage();
-                bm.BeginInit();
-                bm.UriSource = new Uri("C:/1.png");
-                bm.EndInit();
-
                 lViews.Add(new InterfaceObjects.DishView()); //Добавляем новый элемент в коллекцию
                 decimal t_price = Math.Round(Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Price, 2); //Округляем циферки в цене
                 lViews[i].lName.Content = Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Name.ToString(); //Задаем имя...
                 lViews[i].lPrice.Content = $"{t_price} p."; //...цену...
                 lViews[i].lWeight.Content = $"{Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Weight} г."; //...вес
-                lViews[i].iPic.Source = bm;
                 wpDishes.Children.Add(lViews[i]);
             }
         }
