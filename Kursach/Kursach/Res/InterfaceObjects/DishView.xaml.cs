@@ -27,7 +27,7 @@ namespace Kursach.Res.InterfaceObjects
         {
             InitializeComponent();
             this.Margin = new Thickness(10);
-            pic = @"/Res/Static/Pictures/Dishes/GrekoVostochniy.jpg";
+            aa = "dsfsd";
         }
     }
 }

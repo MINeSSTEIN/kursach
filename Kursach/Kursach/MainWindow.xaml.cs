@@ -20,5 +20,10 @@ namespace Kursach
 
 
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Res.Classes.ObjectsVisibility.EntityVision.e.Dispose();
+        }
     }
 }

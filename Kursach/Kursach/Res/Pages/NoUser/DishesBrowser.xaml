@@ -9,8 +9,8 @@
       Title="DishesBrowser">
 
     <Grid>
-        <WrapPanel x:Name="wpDishes">
-            
+        <WrapPanel x:Name="wpDishes" ScrollViewer.CanContentScroll="True" >
+
         </WrapPanel>
     </Grid>
 </Page>
