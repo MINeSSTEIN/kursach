@@ -9,8 +9,9 @@
       Title="Main">
 
     <Grid>
-        <Label Content="&#9;&#9;&#9;      Добро пожаловать!&#13; сейчас здесь ничего нет, но когда я придумаю, как сделать, обязательно будет."
+        <Label Content="Добро пожаловать.&#13;К сожалению, неавторизированные пользователи могут просматривать меню только в будмажном виде.&#13;Пожалуйста, авторизируйтесь"
                HorizontalAlignment="Center"
-               VerticalAlignment="Center"/>
+               VerticalAlignment="Center" FontSize="20" FontFamily="Gothic sans"
+               Hyperlink.Click="Label_Click"/>
     </Grid>
 </Page>

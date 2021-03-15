@@ -24,5 +24,10 @@ namespace Kursach.Res.Pages.NoUser
         {
             InitializeComponent();
         }
+
+        private void Label_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

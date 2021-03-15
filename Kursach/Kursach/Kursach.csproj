@@ -86,6 +86,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Res\Classes\ObjectsVisibility\btnsFrameVision.cs" />
+    <Compile Include="Res\Classes\ObjectsVisibility\CurrentUserInfo.cs" />
     <Compile Include="Res\Classes\ObjectsVisibility\EntityVision.cs" />
     <Compile Include="Res\Classes\ObjectsVisibility\FrameVision.cs" />
     <Compile Include="Res\InterfaceObjects\DishView.xaml.cs">
@@ -96,9 +97,6 @@
     </Compile>
     <Compile Include="Res\Pages\Buttons\ButtonsNoUser.xaml.cs">
       <DependentUpon>ButtonsNoUser.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Res\Pages\NoUser\Auth\Registration.xaml.cs">
-      <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
     <Compile Include="Res\Pages\NoUser\DishesBrowser.xaml.cs">
       <DependentUpon>DishesBrowser.xaml</DependentUpon>
@@ -139,10 +137,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Res\Pages\Buttons\ButtonsNoUser.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Res\Pages\NoUser\Auth\Registration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -194,6 +188,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Res\Pages\Auth\" />
     <Folder Include="Res\Static\Pictures\Dishes\" />
   </ItemGroup>
   <ItemGroup>
