@@ -9,19 +9,36 @@ namespace Kursach.Res.Pages.Buttons
     /// </summary>
     public partial class ButtonsNoUser : Page
     {
+        public static Button _btnMain;
+        public static Button _btnLogin;
+        public static Button _btnDishes;
         public ButtonsNoUser()
         {
             InitializeComponent();
+            _btnMain = btnMain;
+            _btnDishes = btnDishesView;
+            _btnLogin = btnLogin;
+            Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault();
         }
 
         private void btnDishesView_Click(object sender, RoutedEventArgs e)
         {
             Classes.ObjectsVisibility.FrameVision.f.Navigate(new NoUser.DishesBrowser());
+            Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(_btnDishes);
+
         }
 
         private void btnMain_Click(object sender, RoutedEventArgs e)
         {
             Classes.ObjectsVisibility.FrameVision.f.Navigate(new NoUser.Main());
+            Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(_btnMain);
+
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(_btnLogin);
+
         }
     }
 }

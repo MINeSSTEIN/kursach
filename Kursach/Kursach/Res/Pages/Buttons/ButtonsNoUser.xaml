@@ -10,9 +10,10 @@
 
     <Grid>
         
-        <StackPanel x:Name="spMain">
+        <StackPanel x:Name="spMain" x:FieldModifier="public">
             <Button x:Name="btnMain" Content="Главная" Click="btnMain_Click"/>
             <Button x:Name="btnDishesView" Content="Сделать заказ" Click="btnDishesView_Click"/>
+            <Button x:Name="btnLogin" Content="Вход" Click="btnLogin_Click"/>
         </StackPanel>
     </Grid>
 </Page>

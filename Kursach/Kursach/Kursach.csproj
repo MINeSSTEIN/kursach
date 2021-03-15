@@ -89,6 +89,7 @@
     <Compile Include="Res\Classes\ObjectsVisibility\CurrentUserInfo.cs" />
     <Compile Include="Res\Classes\ObjectsVisibility\EntityVision.cs" />
     <Compile Include="Res\Classes\ObjectsVisibility\FrameVision.cs" />
+    <Compile Include="Res\Classes\StaticClasses\ButtonsBehaviour.cs" />
     <Compile Include="Res\InterfaceObjects\DishView.xaml.cs">
       <DependentUpon>DishView.xaml</DependentUpon>
     </Compile>
