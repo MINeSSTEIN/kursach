@@ -7,8 +7,12 @@
       <Diagram DiagramId="697d9eaf6ee44180929a3f2d277e5bcc" Name="Diagram1" >
         <EntityTypeShape EntityType="Restraunt_DB_Model.Dishes" Width="1.5" PointX="3" PointY="0.875" />
         <EntityTypeShape EntityType="Restraunt_DB_Model.Dishes_Type" Width="1.5" PointX="0.75" PointY="1.25" />
-        <EntityTypeShape EntityType="Restraunt_DB_Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" />
         <AssociationConnector Association="Restraunt_DB_Model.FK_Dishes_Dishes_Type" />
+        <EntityTypeShape EntityType="Restraunt_DB_Model.Users" Width="1.5" PointX="9.5" PointY="0.5" />
+        <EntityTypeShape EntityType="Restraunt_DB_Model.Users_Cards" Width="1.5" PointX="7.25" PointY="4.5" />
+        <EntityTypeShape EntityType="Restraunt_DB_Model.Users_Types" Width="1.5" PointX="7.25" PointY="1.5" />
+        <AssociationConnector Association="Restraunt_DB_Model.FK_Users_Users_Cards" />
+        <AssociationConnector Association="Restraunt_DB_Model.FK_Users_Users_Types" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

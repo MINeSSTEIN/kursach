@@ -3,7 +3,6 @@
   <EntityContainer Name="Restraunt_DB_Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Dishes" EntityType="Restraunt_DB_Model.Dishes" />
     <EntitySet Name="Dishes_Type" EntityType="Restraunt_DB_Model.Dishes_Type" />
-    <EntitySet Name="sysdiagrams" EntityType="Restraunt_DB_Model.sysdiagrams" />
     <AssociationSet Name="FK_Dishes_Dishes_Type" Association="Restraunt_DB_Model.FK_Dishes_Dishes_Type">
       <End Role="Dishes_Type" EntitySet="Dishes_Type" />
       <End Role="Dishes" EntitySet="Dishes" />
@@ -38,6 +37,17 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="Users" EntityType="Restraunt_DB_Model.Users" />
+    <EntitySet Name="Users_Cards" EntityType="Restraunt_DB_Model.Users_Cards" />
+    <EntitySet Name="Users_Types" EntityType="Restraunt_DB_Model.Users_Types" />
+    <AssociationSet Name="FK_Users_Users_Cards" Association="Restraunt_DB_Model.FK_Users_Users_Cards">
+      <End Role="Users_Cards" EntitySet="Users_Cards" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users_Types" Association="Restraunt_DB_Model.FK_Users_Users_Types">
+      <End Role="Users_Types" EntitySet="Users_Types" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Dishes">
     <Key>
@@ -58,16 +68,6 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Dishes" Relationship="Restraunt_DB_Model.FK_Dishes_Dishes_Type" FromRole="Dishes_Type" ToRole="Dishes" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="FK_Dishes_Dishes_Type">
     <End Type="Restraunt_DB_Model.Dishes_Type" Role="Dishes_Type" Multiplicity="1" />
@@ -92,4 +92,63 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Telephone" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="RegDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Sorename" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Thirdname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CardNumber" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="Mailing" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Users_Cards" Relationship="Restraunt_DB_Model.FK_Users_Users_Cards" FromRole="Users" ToRole="Users_Cards" />
+    <NavigationProperty Name="Users_Types" Relationship="Restraunt_DB_Model.FK_Users_Users_Types" FromRole="Users" ToRole="Users_Types" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Users_Cards">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="CVV_CVC" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="Restraunt_DB_Model.FK_Users_Users_Cards" FromRole="Users_Cards" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Users_Types">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="Restraunt_DB_Model.FK_Users_Users_Types" FromRole="Users_Types" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_Users_Users_Cards">
+    <End Type="Restraunt_DB_Model.Users_Cards" Role="Users_Cards" Multiplicity="1" />
+    <End Type="Restraunt_DB_Model.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users_Cards">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="CardNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users_Types">
+    <End Type="Restraunt_DB_Model.Users_Types" Role="Users_Types" Multiplicity="1" />
+    <End Type="Restraunt_DB_Model.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users_Types">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

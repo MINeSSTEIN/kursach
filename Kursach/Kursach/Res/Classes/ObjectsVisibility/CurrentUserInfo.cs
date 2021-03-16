@@ -9,6 +9,6 @@ namespace Kursach.Res.Classes.ObjectsVisibility
     class CurrentUserInfo
     {
         public static int id;
-        public static string type;
+        public static int type;
     }
 }

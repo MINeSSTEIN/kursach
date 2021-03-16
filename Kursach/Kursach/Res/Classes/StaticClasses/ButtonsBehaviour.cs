@@ -9,7 +9,7 @@ namespace Kursach.Res.Classes.StaticClasses
         {
             switch(ObjectsVisibility.CurrentUserInfo.type)
             {
-                case("guest"):
+                case(1):
 
 
                     break;

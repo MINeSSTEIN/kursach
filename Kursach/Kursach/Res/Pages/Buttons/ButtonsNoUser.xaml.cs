@@ -38,7 +38,7 @@ namespace Kursach.Res.Pages.Buttons
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(_btnLogin);
-
+            Classes.ObjectsVisibility.FrameVision.f.Navigate(new NoUser.Login());
         }
     }
 }
