@@ -10,10 +10,15 @@
 namespace Kursach
 {
     using System;
+    using System.Collections.Generic;
     
-    public partial class sp_helpdiagramdefinition_Result
+    public partial class v_Dishes_With_Types_View
     {
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int id { get; set; }
+        public string Name { get; set; }
+        public decimal Price { get; set; }
+        public string Type { get; set; }
+        public int Weight { get; set; }
+        public string PicturePath { get; set; }
     }
 }

@@ -31,7 +31,6 @@ C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceO
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\DishView.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\DishView.baml
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.csprojAssemblyReference.cache
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\Orders.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\Orders.baml
 C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\bin\Debug\Kursach.exe.config
@@ -76,3 +75,10 @@ C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursa
 C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\Pages\Guest\Main.g.cs
 C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\Pages\Buttons\Buttons_Guest.baml
 C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\Pages\Guest\Main.baml
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\Buttons\Buttons_Guest.g.cs
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\Guest\Main.g.cs
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\Login.g.cs
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\Buttons\Buttons_Guest.baml
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\Guest\Main.baml
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\Login.baml
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.csprojAssemblyReference.cache

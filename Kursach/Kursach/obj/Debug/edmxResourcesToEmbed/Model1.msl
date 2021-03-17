@@ -4,54 +4,66 @@
     <EntitySetMapping Name="Dishes">
       <EntityTypeMapping TypeName="Restraunt_DB_Model.Dishes">
         <MappingFragment StoreEntitySet="Dishes">
-          <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
-          <ScalarProperty Name="Weight" ColumnName="Weight" />
-          <ScalarProperty Name="id_Dishes_Type" ColumnName="id_Dishes_Type" />
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="id_Dishes_Type" ColumnName="id_Dishes_Type" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Dishes_Type">
       <EntityTypeMapping TypeName="Restraunt_DB_Model.Dishes_Type">
         <MappingFragment StoreEntitySet="Dishes_Type">
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="Restraunt_DB_Model.Users">
         <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Mailing" ColumnName="Mailing" />
-          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
-          <ScalarProperty Name="Thirdname" ColumnName="Thirdname" />
-          <ScalarProperty Name="Sorename" ColumnName="Sorename" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
-          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
-          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
-          <ScalarProperty Name="Type" ColumnName="Type" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="RegDate" ColumnName="RegDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Sorename" ColumnName="Sorename" />
+          <ScalarProperty Name="Thirdname" ColumnName="Thirdname" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="Mailing" ColumnName="Mailing" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users_Cards">
       <EntityTypeMapping TypeName="Restraunt_DB_Model.Users_Cards">
         <MappingFragment StoreEntitySet="Users_Cards">
-          <ScalarProperty Name="CVV_CVC" ColumnName="CVV/CVC" />
           <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="CVV_CVC" ColumnName="CVV/CVC" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users_Types">
       <EntityTypeMapping TypeName="Restraunt_DB_Model.Users_Types">
         <MappingFragment StoreEntitySet="Users_Types">
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_Dishes_With_Types_View">
+      <EntityTypeMapping TypeName="Restraunt_DB_Model.v_Dishes_With_Types_View">
+        <MappingFragment StoreEntitySet="v_Dishes_With_Types_View">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

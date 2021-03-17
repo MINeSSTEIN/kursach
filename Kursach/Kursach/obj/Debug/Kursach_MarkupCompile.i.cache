@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\
 Kursach
 none
 false
 DEBUG;TRACE
-C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\App.xaml
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\App.xaml
 10-232304743
 21750853300
-301168345669
-18-27382556
+29-629180667
+18708499703
 MainWindow.xaml;Res\InterfaceObjects\DishView.xaml;Res\InterfaceObjects\_Attempt_DishView.xaml;Res\Pages\Buttons\ButtonsNoUser.xaml;Res\Pages\Buttons\Buttons_Guest.xaml;Res\Pages\Guest\Main.xaml;Res\Pages\NoUser\DishesBrowser.xaml;Res\Pages\NoUser\Login.xaml;Res\Pages\NoUser\Main.xaml;Res\Pages\NoUser\Orders.xaml;
 
-True
+False
 

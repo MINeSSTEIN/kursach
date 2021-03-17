@@ -1,17 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Data.Entity;
 
 namespace Kursach.Res.Pages.NoUser
@@ -27,8 +16,8 @@ namespace Kursach.Res.Pages.NoUser
 
             DataGrid nota = new DataGrid(); //По приколу создаем "виртуальную" таблицу чтобы пихнуть туда блюда из базы
 
-            Classes.ObjectsVisibility.EntityVision.e.Dishes.Load();//Загружаем таблицу с блюдами из базы данных
-            nota.ItemsSource = Classes.ObjectsVisibility.EntityVision.e.Dishes.Local.ToBindingList(); //Таки пихаем данные из таблицы в таблицу (хвахывхаыва)
+            Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Load();//Загружаем таблицу с блюдами из базы данных
+            nota.ItemsSource = Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Local.ToBindingList(); //Таки пихаем данные из таблицы в таблицу (хвахывхаыва)
             List<InterfaceObjects.DishView> lViews = new List<InterfaceObjects.DishView>(); //Делаем коллекцию с кастомным элементом управления
             
 
@@ -38,16 +27,16 @@ namespace Kursach.Res.Pages.NoUser
                 try
                 {
                     lViews.Add(new InterfaceObjects.DishView()); //Добавляем новый элемент в коллекцию
-                    decimal t_price = Math.Round(Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Price, 2); //Округляем циферки в цене
-                    lViews[i].lName.Content = Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Name.ToString(); //Задаем имя...
+                    decimal t_price = Math.Round(Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Local[i].Price, 2); //Округляем циферки в цене
+                    lViews[i].lName.Content = Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Local[i].Name.ToString(); //Задаем имя...
                     lViews[i].lPrice.Content = $"{t_price} p."; //...цену...
-                    lViews[i].lWeight.Content = $"{Classes.ObjectsVisibility.EntityVision.e.Dishes.Find(i + 1).Weight} г."; //...вес
+                    lViews[i].lWeight.Content = $"{Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Local[i].Weight} г."; //...вес...
+                    lViews[i].lType.Content = Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Local[i].Type;
                     wpDishes.Children.Add(lViews[i]);
                 }
                 catch { }
             }
             var l = new Label();
-            string end = "и";
             l.Content = $"Записей загружено: {lViews.Count}";
             wpDishes.Children.Add(l);
         }

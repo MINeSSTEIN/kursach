@@ -19,6 +19,7 @@ namespace Kursach.Res.Pages.Buttons
             _btnDishes = btnDishesView;
             _btnLogin = btnLogin;
             Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault();
+            Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(_btnMain);
         }
 
         private void btnDishesView_Click(object sender, RoutedEventArgs e)

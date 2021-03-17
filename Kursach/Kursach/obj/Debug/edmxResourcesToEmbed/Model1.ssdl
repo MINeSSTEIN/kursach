@@ -49,6 +49,23 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Restraunt_db_temp.dbo.v_Dishes_With_Types_View" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="v_Dishes_With_Types_View">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Price" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Weight" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Weight" Type="int" Nullable="false" />
+    <Property Name="PicturePath" Type="nvarchar(max)" />
+  </EntityType>
   <Association Name="FK_Dishes_Dishes_Type">
     <End Role="Dishes_Type" Type="Self.Dishes_Type" Multiplicity="1" />
     <End Role="Dishes" Type="Self.Dishes" Multiplicity="*" />
@@ -91,6 +108,16 @@
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users_Cards" EntityType="Self.Users_Cards" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users_Types" EntityType="Self.Users_Types" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="v_Dishes_With_Types_View" EntityType="Self.v_Dishes_With_Types_View" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [v_Dishes_With_Types_View].[id] AS [id], 
+    [v_Dishes_With_Types_View].[Name] AS [Name], 
+    [v_Dishes_With_Types_View].[Price] AS [Price], 
+    [v_Dishes_With_Types_View].[Type] AS [Type], 
+    [v_Dishes_With_Types_View].[Weight] AS [Weight], 
+    [v_Dishes_With_Types_View].[PicturePath] AS [PicturePath]
+    FROM [dbo].[v_Dishes_With_Types_View] AS [v_Dishes_With_Types_View]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_Dishes_Dishes_Type" Association="Self.FK_Dishes_Dishes_Type">
       <End Role="Dishes_Type" EntitySet="Dishes_Type" />
       <End Role="Dishes" EntitySet="Dishes" />
