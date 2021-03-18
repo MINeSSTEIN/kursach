@@ -26,9 +26,6 @@ C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.exe
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.pdb
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\DishesBrowser.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\DishesBrowser.baml
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\_Attempt_DishView.g.cs
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\_Attempt_DishView.baml
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\DishView.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\DishView.baml
 C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\bin\Debug\Kursach.exe.config
@@ -82,9 +79,6 @@ C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\Registration.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\Registration.baml
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.csprojAssemblyReference.cache
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\MaskedTB.g.cs
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\MaskedTB.baml
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\Xceed.Wpf.AvalonDock.dll
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll

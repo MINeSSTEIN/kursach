@@ -10,10 +10,5 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model1.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("model1.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery-1.9.0.intellisense.js")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery-1.9.0.js")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery-1.9.0.min.js")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery.maskedinput.js")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scripts/jquery.maskedinput.min.js")]
 
 

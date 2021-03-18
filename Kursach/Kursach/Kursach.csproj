@@ -110,12 +110,6 @@
     <Compile Include="Res\InterfaceObjects\DishView.xaml.cs">
       <DependentUpon>DishView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Res\InterfaceObjects\MaskedTB.xaml.cs">
-      <DependentUpon>MaskedTB.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Res\InterfaceObjects\_Attempt_DishView.xaml.cs">
-      <DependentUpon>_Attempt_DishView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Res\Pages\Buttons\ButtonsNoUser.xaml.cs">
       <DependentUpon>ButtonsNoUser.xaml</DependentUpon>
     </Compile>
@@ -162,14 +156,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Res\InterfaceObjects\DishView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Res\InterfaceObjects\MaskedTB.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Res\InterfaceObjects\_Attempt_DishView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -232,7 +218,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Scripts\jquery-1.9.0.min.map" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -255,11 +240,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="Scripts\jquery-1.9.0.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.0.js" />
-    <Content Include="Scripts\jquery-1.9.0.min.js" />
-    <Content Include="Scripts\jquery.maskedinput.js" />
-    <Content Include="Scripts\jquery.maskedinput.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
