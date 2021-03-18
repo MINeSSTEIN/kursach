@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Kursach.Res.Pages.NoUser
 {
     /// <summary>
-    /// Логика взаимодействия для Orders.xaml
+    /// Логика взаимодействия для Registration.xaml
     /// </summary>
-    public partial class Orders : Page
+    public partial class Registration : Page
     {
-        public Orders()
+        public Registration()
         {
             InitializeComponent();
         }

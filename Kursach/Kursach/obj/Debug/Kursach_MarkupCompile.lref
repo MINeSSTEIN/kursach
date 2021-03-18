@@ -2,6 +2,7 @@
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\App.xaml;;
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\MainWindow.xaml;;
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\InterfaceObjects\DishView.xaml;;
+FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\InterfaceObjects\MaskedTB.xaml;;
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\InterfaceObjects\_Attempt_DishView.xaml;;
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\Buttons\ButtonsNoUser.xaml;;
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\Buttons\Buttons_Guest.xaml;;
@@ -9,5 +10,5 @@ FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\Guest\Main.xa
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\NoUser\DishesBrowser.xaml;;
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\NoUser\Login.xaml;;
 FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\NoUser\Main.xaml;;
-FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\NoUser\Orders.xaml;;
+FC:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\Res\Pages\NoUser\Registration.xaml;;
 

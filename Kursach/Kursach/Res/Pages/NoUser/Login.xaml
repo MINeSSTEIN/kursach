@@ -4,15 +4,15 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Kursach.Res.Pages.NoUser"
+      xmlns:e="clr-namespace:Xceed.Wpf.Toolkit.Obselete;assembly=Xceed.Wpf.Toolkit"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Login">
 
     <Grid>
-
         <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
-            <Label Content="Введите телефон" Width="110"/>
-            <TextBox x:Name="tbLogin" Width="200"/>
+            <Label Content="Введите телефон" Width="110" />
+            <e:MaskedTextBox x:Name="tbLogin" Width="200" Mask="+7(000)000-00-00"/>
             <Label Content="Введите пароль" Width="100"/>
             <PasswordBox x:Name="pbPassword" Width="200"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
