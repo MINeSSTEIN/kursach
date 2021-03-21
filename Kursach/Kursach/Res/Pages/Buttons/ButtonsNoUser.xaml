@@ -10,11 +10,11 @@
 
     <Grid>
         
-        <StackPanel x:Name="spMain" x:FieldModifier="public">
-            <Button x:Name="btnMain" Content="Главная" Click="btnMain_Click"/>
-            <Button x:Name="btnDishesView" Content="Сделать заказ" Click="btnDishesView_Click"/>
-            <Button x:Name="btnLogin" Content="Вход" Click="btnLogin_Click"/>
-            <Button x:Name="btnReg" Content="Регистрация" Click="btnReg_Click"/>
+        <StackPanel x:Name="spMain">
+            <Button x:Name="btnMain" Content="Главная" Click="btnMain_Click" Style="{StaticResource MenuButtons}"/>
+            <Button x:Name="btnDishesView" Content="Сделать заказ" Click="btnDishesView_Click" Style="{StaticResource MenuButtons}"/>
+            <Button x:Name="btnLogin" Content="Вход" Click="btnLogin_Click" Style="{StaticResource MenuButtons}"/>
+            <Button x:Name="btnReg" Content="Регистрация" Click="btnReg_Click" Style="{StaticResource MenuButtons}"/>
         </StackPanel>
     </Grid>
 </Page>

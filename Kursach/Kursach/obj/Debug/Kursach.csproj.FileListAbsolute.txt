@@ -96,3 +96,4 @@ C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\ro\Xceed.Wpf.A
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Kursach.csprojAssemblyReference.cache

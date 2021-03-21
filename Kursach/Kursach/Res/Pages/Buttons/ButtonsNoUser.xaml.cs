@@ -17,6 +17,8 @@ namespace Kursach.Res.Pages.Buttons
         public static Button _btnDishes;
         public static Button _btnReg;
 
+        private static Button oldButton;
+
         public ButtonsNoUser()
         {
             InitializeComponent();
@@ -26,28 +28,30 @@ namespace Kursach.Res.Pages.Buttons
             _btnLogin = btnLogin;
             _btnReg = btnReg;
 
+            oldButton = btnMain;
+
             Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault();
-            Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(_btnMain);
+            Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(_btnMain, btnDishesView);
         }
 
         private void btnDishesView_Click(object sender, RoutedEventArgs e)
         {
-            SelectPage(btnDishesView, new NoUser.DishesBrowser());
+            SelectPage(btnDishesView, oldButton, new NoUser.DishesBrowser());
         }
 
         private void btnMain_Click(object sender, RoutedEventArgs e)
         {
-            SelectPage(btnMain, new NoUser.Main());
+            SelectPage(btnMain, oldButton, new NoUser.Main());
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            SelectPage(btnLogin, new NoUser.Login());
+            SelectPage(btnLogin, oldButton, new NoUser.Login());
         }
 
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
-            SelectPage(btnReg, new NoUser.Registration());
+            SelectPage(btnReg, oldButton, new NoUser.Registration());
         }
 
         /// <summary>
@@ -55,10 +59,11 @@ namespace Kursach.Res.Pages.Buttons
         /// </summary>
         /// <param name="active">Активная кнопка</param>
         /// <param name="newActive">Активная страница</param>
-        private static void SelectPage(Button active, Page newActive)
+        private static void SelectPage(Button active, Button old, Page newActive)
         {
             Classes.ObjectsVisibility.FrameVision.f.Navigate(newActive);
-            Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(active);
+            Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(active, old);
+            oldButton = active;
         }
     }
 }
