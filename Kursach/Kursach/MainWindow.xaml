@@ -6,13 +6,27 @@
         xmlns:local="clr-namespace:Kursach"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1280"
-        Closing="Window_Closing">
+        Closing="Window_Closing"
+        >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
-        <Frame x:Name="fMain" NavigationUIVisibility="Hidden" Grid.Column="1"/>
-        <Frame x:Name="fButtons" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="fMain" 
+               NavigationUIVisibility=
+               "Hidden" Grid.Column="1" 
+               >
+            <Frame.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFE0E9C6" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </RadialGradientBrush>
+            </Frame.Background>
+        </Frame >
+        <Frame x:Name="fButtons" 
+               BorderBrush="Black"
+               BorderThickness="1"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
