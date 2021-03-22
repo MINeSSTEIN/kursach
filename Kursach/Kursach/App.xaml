@@ -12,7 +12,7 @@
                         <Border x:Name="border" 
                                 CornerRadius="15" 
                                 BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                BorderThickness="2" 
                                 Background="{TemplateBinding Background}" 
                                 SnapsToDevicePixels="true">
                             <ContentPresenter x:Name="contentPresenter" 

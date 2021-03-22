@@ -10,12 +10,15 @@
              
              >
     <UserControl.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Century Gothic"/>
+        </Style>
         <Style x:Key="UserControlStyle1" TargetType="{x:Type UserControl}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type UserControl}">
                         <Border CornerRadius="15" BorderBrush="#9d2d0f"
-                                BorderThickness="1" Background="#fae5cf"
+                                BorderThickness="2" Background="#fae5cf"
                                 Padding="{TemplateBinding Padding}"
                                 SnapsToDevicePixels="true">
                             <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
@@ -35,10 +38,10 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#782009"/>
         <SolidColorBrush x:Key="Button.Static.Border" Color="#782009"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#c84e23"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#592009"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#592009"/>
         <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
         <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
@@ -49,7 +52,7 @@
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="#782009"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Padding" Value="1"/>
