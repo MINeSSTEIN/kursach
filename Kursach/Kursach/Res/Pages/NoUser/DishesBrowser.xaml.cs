@@ -17,20 +17,35 @@ namespace Kursach.Res.Pages.NoUser
         public DishesBrowser()
         {
             InitializeComponent();
-            Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Load();//Загружаем таблицу с блюдами из базы данных
-            nota.ItemsSource = Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Local.ToBindingList(); //Таки пихаем данные из таблицы в таблицу (хвахывхаыва)
 
-            Thread thread1 = new Thread(LoadDishesToViews);
-            thread1.Start();
-            Thread.Sleep(0);
+            LoadDishesDataFromDB();
+
+            ThreadLoadedData();
 
             LoadDishesToViews();
 
+            WriteDishesCount();
+        }
+
+        private void WriteDishesCount()
+        {
             var l = new Label();
             l.Content = $"Записей загружено: {lViews.Count}";
             wpDishes.Children.Add(l);
         }
 
+        private void ThreadLoadedData()
+        {
+            Thread thread1 = new Thread(LoadDishesToViews);
+            thread1.Start();
+            Thread.Sleep(0);
+        }
+
+        private void LoadDishesDataFromDB()
+        {
+            Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Load();//Загружаем таблицу с блюдами из базы данных
+            nota.ItemsSource = Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Local.ToBindingList(); //Таки пихаем данные из таблицы в таблицу (хвахывхаыва)
+        }
 
         private void LoadDishesToViews()
         {
