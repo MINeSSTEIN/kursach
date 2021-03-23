@@ -111,3 +111,4 @@ C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursa
 C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\Registration.g.cs
 C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\Pages\NoUser\Registration.baml
+C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Kursach.csprojAssemblyReference.cache

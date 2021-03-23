@@ -86,8 +86,10 @@
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
         <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
+        
+        <!--All Password box styles--> 
         <Style TargetType="{x:Type PasswordBox}">
-            <Setter Property="PasswordChar" Value="●"/>
+            <Setter Property="PasswordChar" Value="☻"/>
             <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
             <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>

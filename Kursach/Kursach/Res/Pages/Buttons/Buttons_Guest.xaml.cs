@@ -20,14 +20,19 @@ namespace Kursach.Res.Pages.Buttons
     /// </summary>
     public partial class Buttons_Guest : Page
     {
+        public static Button _btnMain;
+        public static Button _btnOld;
         public Buttons_Guest()
         {
             InitializeComponent();
+            _btnMain = btnMain;
+            _btnOld = btnMain;
+
+            Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(_btnMain, _btnOld);
         }
 
         private void btnMain_Click(object sender, RoutedEventArgs e)
         {
-
         }
     }
 }
