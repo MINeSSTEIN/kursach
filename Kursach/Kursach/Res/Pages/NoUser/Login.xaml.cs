@@ -12,6 +12,7 @@ namespace Kursach.Res.Pages.NoUser
         public Login()
         {
             InitializeComponent();
+            tbLogin.Focus();
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)

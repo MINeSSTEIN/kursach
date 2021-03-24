@@ -11,6 +11,8 @@
 
     <Grid>
         <WrapPanel Orientation="Horizontal">
+            <Label Content="Регистрация" FontSize="42" Width="4000"/>
+
             <WrapPanel x:Name="labels" Orientation="Vertical">
                 <Label Content="Email"/>
                 <Label Content="Подтвердить Email"/>

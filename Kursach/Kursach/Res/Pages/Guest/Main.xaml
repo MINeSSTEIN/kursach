@@ -9,6 +9,8 @@
       Title="Main">
 
     <Grid>
-        <Label Content="Добро пожаловать"/>
+        <Label Content="Главная" FontSize="42" Width="4000"/>
+
+        <Label Content="Добро пожаловать" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Page>

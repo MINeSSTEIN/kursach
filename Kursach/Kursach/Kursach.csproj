@@ -223,7 +223,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Res\Pages\Auth\" />
     <Folder Include="Res\Static\Pictures\Dishes\" />
   </ItemGroup>
   <ItemGroup>

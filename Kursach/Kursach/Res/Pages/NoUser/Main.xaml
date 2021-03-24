@@ -9,6 +9,8 @@
       Title="Main">
 
     <Grid>
+        <Label Content="Главная" FontSize="42" Width="4000"/>
+
         <Label Content="Добро пожаловать.&#13;К сожалению, неавторизированные пользователи могут просматривать меню только в бумажном виде.&#13;Пожалуйста, авторизируйтесь"
                HorizontalAlignment="Center"
                VerticalAlignment="Center" FontSize="20" FontFamily="Gothic sans"

@@ -10,6 +10,8 @@
       Title="Login">
 
     <Grid>
+        <Label Content="Вход" FontSize="42" Width="4000"/>
+
         <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
             <Label Content="Введите телефон" Margin="300,0" />
             <e:MaskedTextBox x:Name="tbLogin" Width="200" Mask="+7(000)000-00-00"/>
