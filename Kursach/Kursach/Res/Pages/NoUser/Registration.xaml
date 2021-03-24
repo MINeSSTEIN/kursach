@@ -10,10 +10,11 @@
       Title="Registration">
 
     <Grid>
-        <WrapPanel Orientation="Horizontal">
-            <Label Content="Регистрация" FontSize="42" Width="4000"/>
+        <Label Content="Регистрация" FontSize="42" Width="4000"/>
 
-            <WrapPanel x:Name="labels" Orientation="Vertical">
+        <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,84,0,0">
+
+            <WrapPanel x:Name="labels" Orientation="Vertical" Margin="0,0,0,0">
                 <Label Content="Email"/>
                 <Label Content="Подтвердить Email"/>
                 <Label Content="Дата рождения"/>
@@ -25,7 +26,7 @@
                 <Label Content="Повторить пароль"/>
             </WrapPanel>
             <WrapPanel x:Name="tbs">
-                <e:MaskedTextBox x:Name="mtbEmail"/>
+                <e:MaskedTextBox x:Name="mtbEmail" Width="180"/>
             </WrapPanel>
         </WrapPanel>
     </Grid>
