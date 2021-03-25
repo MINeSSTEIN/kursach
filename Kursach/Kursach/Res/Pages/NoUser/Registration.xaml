@@ -25,8 +25,15 @@
                 <Label Content="Пароль"/>
                 <Label Content="Повторить пароль"/>
             </WrapPanel>
-            <WrapPanel x:Name="tbs">
+            <WrapPanel x:Name="tbs" Orientation="Vertical">
                 <e:MaskedTextBox x:Name="mtbEmail" Width="180"/>
+                <e:MaskedTextBox x:Name="mtbEmailConfirm" Width="180"/>
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox x:Name="cbDate"/>
+                    <ComboBox x:Name="cbMonth"/>
+                    <ComboBox x:Name="cbYear"/>
+                </StackPanel>
+
             </WrapPanel>
         </WrapPanel>
     </Grid>

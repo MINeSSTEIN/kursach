@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Kursach.Res.InterfaceObjects"
+             xmlns:e="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="256" 
              Style="{DynamicResource UserControlStyle1}"
@@ -96,9 +97,13 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
-        <Image x:Name="iPic" Margin="3"/>
+        <UserControl Style="{DynamicResource UserControlStyle1}" Width="90" Height="110" Margin="3">
+            <Grid>
+                <Image x:Name="iPic" Width="90" Height="110" Stretch="Fill"/>
+            </Grid>
+        </UserControl>
         <StackPanel Grid.Column="1">
             <Label x:Name="lName" FontSize="18"/>
             <Label x:Name="lType" FontSize="14"/>
