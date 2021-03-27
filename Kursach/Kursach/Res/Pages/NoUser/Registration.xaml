@@ -29,9 +29,9 @@
                 <e:MaskedTextBox x:Name="mtbEmail" Width="180"/>
                 <e:MaskedTextBox x:Name="mtbEmailConfirm" Width="180"/>
                 <StackPanel Orientation="Horizontal">
-                    <ComboBox x:Name="cbDate"/>
-                    <ComboBox x:Name="cbMonth"/>
-                    <ComboBox x:Name="cbYear"/>
+                    <ComboBox x:Name="cbDate" Width="40"/>
+                    <ComboBox x:Name="cbMonth" SelectionChanged="cbMonth_SelectionChanged" Width="70"/>
+                    <ComboBox x:Name="cbYear" SelectionChanged="cbYear_SelectionChanged" Width="60"/>
                 </StackPanel>
 
             </WrapPanel>
