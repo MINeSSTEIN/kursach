@@ -8,7 +8,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="256" 
              Style="{DynamicResource UserControlStyle1}"
-             
              >
     <UserControl.Resources>
         <Style TargetType="Label">
