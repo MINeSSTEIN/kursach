@@ -14,6 +14,10 @@
         <AssociationConnector Association="Restraunt_DB_Model.FK_Dishes_Dishes_Type" ManuallyRouted="false" />
         <AssociationConnector Association="Restraunt_DB_Model.FK_Users_Users_Cards" ManuallyRouted="false" />
         <AssociationConnector Association="Restraunt_DB_Model.FK_Users_Users_Types" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Restraunt_DB_Model.Orders" Width="1.5" PointX="10.25" PointY="1.5" />
+        <EntityTypeShape EntityType="Restraunt_DB_Model.sysdiagrams" Width="1.5" PointX="5.375" PointY="4.75" />
+        <AssociationConnector Association="Restraunt_DB_Model.FK_Orders_Dishes" />
+        <AssociationConnector Association="Restraunt_DB_Model.FK_Orders_Users" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

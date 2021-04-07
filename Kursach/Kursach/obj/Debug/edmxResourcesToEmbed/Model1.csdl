@@ -11,6 +11,8 @@
     <Property Name="Weight" Type="Int32" Nullable="false" />
     <Property Name="PicturePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Dishes_Type" Relationship="Self.FK_Dishes_Dishes_Type" FromRole="Dishes" ToRole="Dishes_Type" />
+    <Property Name="Recipe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="Restraunt_DB_Model.FK_Orders_Dishes" FromRole="Dishes" ToRole="Orders" />
   </EntityType>
   <EntityType Name="Dishes_Type">
     <Key>
@@ -38,6 +40,7 @@
     <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Users_Cards" Relationship="Self.FK_Users_Users_Cards" FromRole="Users" ToRole="Users_Cards" />
     <NavigationProperty Name="Users_Types" Relationship="Self.FK_Users_Users_Types" FromRole="Users" ToRole="Users_Types" />
+    <NavigationProperty Name="Orders" Relationship="Restraunt_DB_Model.FK_Orders_Users" FromRole="Users" ToRole="Orders" />
   </EntityType>
   <EntityType Name="Users_Cards">
     <Key>
@@ -125,5 +128,105 @@
       <End Role="Users_Types" EntitySet="Users_Types" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
+    <EntitySet Name="Orders" EntityType="Restraunt_DB_Model.Orders" />
+    <EntitySet Name="sysdiagrams" EntityType="Restraunt_DB_Model.sysdiagrams" />
+    <AssociationSet Name="FK_Orders_Dishes" Association="Restraunt_DB_Model.FK_Orders_Dishes">
+      <End Role="Dishes" EntitySet="Dishes" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Users" Association="Restraunt_DB_Model.FK_Orders_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Restraunt_DB_Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Restraunt_DB_Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dish_id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" Nullable="false" />
+    <Property Name="IsOrdered" Type="Boolean" Nullable="false" />
+    <Property Name="IsCooking" Type="Boolean" Nullable="false" />
+    <Property Name="IsCooked" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelivered" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Dishes" Relationship="Restraunt_DB_Model.FK_Orders_Dishes" FromRole="Orders" ToRole="Dishes" />
+    <NavigationProperty Name="Users" Relationship="Restraunt_DB_Model.FK_Orders_Users" FromRole="Orders" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Orders_Dishes">
+    <End Type="Restraunt_DB_Model.Dishes" Role="Dishes" Multiplicity="1" />
+    <End Type="Restraunt_DB_Model.Orders" Role="Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dishes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="dish_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Users">
+    <End Type="Restraunt_DB_Model.Users" Role="Users" Multiplicity="1" />
+    <End Type="Restraunt_DB_Model.Orders" Role="Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>

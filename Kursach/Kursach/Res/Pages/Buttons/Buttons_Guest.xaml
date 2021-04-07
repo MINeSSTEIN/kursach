@@ -11,6 +11,9 @@
     <Grid>
         <StackPanel>
             <Button x:Name="btnMain" Content="Главная" Click="btnMain_Click" Style="{DynamicResource MenuButtons}"/>
+            <Button x:Name="btnDishes" Content="Сделать заказ" Click="btnDishes_Click" Style="{DynamicResource MenuButtons}"/>
+            <Button x:Name="btnOrders" Content="Заказы" Click="btnOrders_Click" Style="{DynamicResource MenuButtons}"/>
+
         </StackPanel>
     </Grid>
 </Page>

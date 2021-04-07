@@ -33,6 +33,18 @@ namespace Kursach.Res.Pages.Buttons
 
         private void btnMain_Click(object sender, RoutedEventArgs e)
         {
+            Classes.ObjectsVisibility.FrameVision.f.Navigate(new Guest.Main());
+
+        }
+
+        private void btnDishes_Click(object sender, RoutedEventArgs e)
+        {
+            Classes.ObjectsVisibility.FrameVision.f.Navigate(new NoUser.DishesBrowser());
+        }
+
+        private void btnOrders_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

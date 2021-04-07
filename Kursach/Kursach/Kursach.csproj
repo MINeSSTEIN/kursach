@@ -103,6 +103,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Orders.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Res\Classes\ObjectsVisibility\btnsFrameVision.cs" />
     <Compile Include="Res\Classes\ObjectsVisibility\CurrentUserInfo.cs" />
     <Compile Include="Res\Classes\ObjectsVisibility\EntityVision.cs" />
@@ -110,6 +113,9 @@
     <Compile Include="Res\Classes\StaticClasses\ButtonsBehaviour.cs" />
     <Compile Include="Res\InterfaceObjects\DishView.xaml.cs">
       <DependentUpon>DishView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Res\InterfaceObjects\OrderView.xaml.cs">
+      <DependentUpon>OrderView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Res\Pages\Buttons\ButtonsNoUser.xaml.cs">
       <DependentUpon>ButtonsNoUser.xaml</DependentUpon>
@@ -119,6 +125,9 @@
     </Compile>
     <Compile Include="Res\Pages\Guest\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Res\Pages\Guest\Orders.xaml.cs">
+      <DependentUpon>Orders.xaml</DependentUpon>
     </Compile>
     <Compile Include="Res\Pages\NoUser\DishesBrowser.xaml.cs">
       <DependentUpon>DishesBrowser.xaml</DependentUpon>
@@ -131,6 +140,15 @@
     </Compile>
     <Compile Include="Res\Pages\NoUser\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -160,6 +178,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Res\InterfaceObjects\OrderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Res\Pages\Buttons\ButtonsNoUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -169,6 +191,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Res\Pages\Guest\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Res\Pages\Guest\Orders.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

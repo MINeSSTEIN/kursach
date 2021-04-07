@@ -20,14 +20,32 @@ namespace Kursach.Res.InterfaceObjects
     /// </summary>
     public partial class DishView : UserControl
     {
-        public string pic;
-        public string aa;
-
+        public int id;
         public DishView()
         {
             InitializeComponent();
             this.Margin = new Thickness(10);
-            aa = "dsfsd";
+        }
+
+        private void btnOrder_Click(object sender, RoutedEventArgs e)
+        {
+            if (Classes.ObjectsVisibility.CurrentUserInfo.type == 1)
+            {
+                var order = new Orders();
+                order.dish_id = id;
+                order.user_id = Classes.ObjectsVisibility.CurrentUserInfo.id;
+                order.Time = DateTime.Now;
+                order.IsOrdered = false;
+                order.IsCooking = false;
+                order.IsCooked = false;
+                order.IsDelivered = false;
+
+                Classes.ObjectsVisibility.EntityVision.e.Orders.Add(order);
+            }
+            else
+            {
+                MessageBox.Show("Только авторизованные пользователи могут заказывать блюда.", "Ошибка");
+            }
         }
     }
 }

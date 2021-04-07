@@ -14,6 +14,12 @@ namespace Kursach
     
     public partial class Users
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Users()
+        {
+            this.Orders = new HashSet<Orders>();
+        }
+    
         public int id { get; set; }
         public int Type { get; set; }
         public string Telephone { get; set; }
@@ -29,5 +35,7 @@ namespace Kursach
     
         public virtual Users_Cards Users_Cards { get; set; }
         public virtual Users_Types Users_Types { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

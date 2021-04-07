@@ -14,13 +14,22 @@ namespace Kursach
     
     public partial class Dishes
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Dishes()
+        {
+            this.Orders = new HashSet<Orders>();
+        }
+    
         public int id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
         public int id_Dishes_Type { get; set; }
         public int Weight { get; set; }
         public string PicturePath { get; set; }
+        public string Recipe { get; set; }
     
         public virtual Dishes_Type Dishes_Type { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }
