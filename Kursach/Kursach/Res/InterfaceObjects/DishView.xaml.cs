@@ -28,7 +28,6 @@ namespace Kursach.Res.InterfaceObjects
             InitializeComponent();
             this.Margin = new Thickness(10);
             aa = "dsfsd";
-            
         }
     }
 }

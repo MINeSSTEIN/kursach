@@ -98,10 +98,14 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
-        <UserControl Style="{DynamicResource UserControlStyle1}" Width="90" Height="110" Margin="3">
+        <UserControl Width="90" Height="110" Margin="3">
             <Grid>
                 <Image x:Name="iPic" Width="90" Height="110" Stretch="Fill"/>
+                <Border>
+                    <Border x:Name="b" CornerRadius="15" BorderBrush="Brown" BorderThickness="2" Background="Transparent"/>
+                </Border>
             </Grid>
+
         </UserControl>
         <StackPanel Grid.Column="1">
             <Label x:Name="lName" FontSize="18"/>
