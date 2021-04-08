@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -41,11 +42,26 @@ namespace Kursach.Res.InterfaceObjects
                 order.IsDelivered = false;
 
                 Classes.ObjectsVisibility.EntityVision.e.Orders.Add(order);
+                Classes.ObjectsVisibility.EntityVision.e.SaveChanges();
+
+                Notification("Заказ добавлен");
             }
             else
             {
                 MessageBox.Show("Только авторизованные пользователи могут заказывать блюда.", "Ошибка");
             }
+        }
+
+        private void Notification(string Message)
+        {
+            Timer t = new Timer(2000);
+            lNoty.Content = Message;
+            t.Enabled = true;
+            while (t.Interval != 2)
+            {
+            }
+            lNoty.Content = "";
+            t.Enabled = false;
         }
     }
 }

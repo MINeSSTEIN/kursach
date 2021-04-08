@@ -111,6 +111,7 @@
             <Label x:Name="lName" FontSize="18"/>
             <Label x:Name="lType" FontSize="14"/>
             <Label x:Name="lWeight" FontSize="14"/>
+            <Label x:Name="lNoty" FontSize="14"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
             <Button x:Name="btnOrder" Margin="5" Click="btnOrder_Click" >В корзину</Button>

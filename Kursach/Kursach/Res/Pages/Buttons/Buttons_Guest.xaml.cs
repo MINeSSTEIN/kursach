@@ -20,6 +20,7 @@ namespace Kursach.Res.Pages.Buttons
     /// </summary>
     public partial class Buttons_Guest : Page
     {
+        public static Label lNoty;
         public static Button _btnMain;
         public static Button _btnOld;
         public Buttons_Guest()
@@ -27,6 +28,7 @@ namespace Kursach.Res.Pages.Buttons
             InitializeComponent();
             _btnMain = btnMain;
             _btnOld = btnMain;
+            lNoty = lNotifier;
 
             Classes.StaticClasses.ButtonsBehaviour.SetButtonsColorDefault(_btnMain, _btnOld);
         }
