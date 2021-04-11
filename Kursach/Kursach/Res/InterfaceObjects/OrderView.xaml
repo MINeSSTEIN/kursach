@@ -4,16 +4,31 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Kursach.Res.InterfaceObjects"
-             mc:Ignorable="d" Height="120" Width="200">
+             mc:Ignorable="d" Height="120" Width="200"
+             Margin="10">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="5*"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
+        <Border Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Border Background="#fae5cf" BorderThickness="2" CornerRadius="15" BorderBrush="Brown"/>
+        </Border>
+        <Image x:Name="iImage" Margin="8,8,0,0"/>
+        <Button x:Name="btnCancel" 
+                Click="btnCancel_Click" 
+                Grid.Row="1" 
+                Style="{DynamicResource ViewsButtons}"
+                Content="Отмена"/>
 
+        <Button x:Name="btnPay"
+                Click="btnPay_Click"
+                Grid.Column="1" Grid.Row="1"
+                Style="{DynamicResource ViewsButtons}"
+                Content="Оплатить один"/>
     </Grid>
 </UserControl>

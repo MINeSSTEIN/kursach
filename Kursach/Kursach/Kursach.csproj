@@ -111,6 +111,7 @@
     <Compile Include="Res\Classes\ObjectsVisibility\EntityVision.cs" />
     <Compile Include="Res\Classes\ObjectsVisibility\FrameVision.cs" />
     <Compile Include="Res\Classes\StaticClasses\ButtonsBehaviour.cs" />
+    <Compile Include="Res\Classes\StaticClasses\OrdersBehaviour.cs" />
     <Compile Include="Res\InterfaceObjects\DishView.xaml.cs">
       <DependentUpon>DishView.xaml</DependentUpon>
     </Compile>
@@ -160,6 +161,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="v_Dishes_With_Types_View.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_orders_view.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">

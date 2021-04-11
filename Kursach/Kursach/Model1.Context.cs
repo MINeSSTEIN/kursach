@@ -35,6 +35,7 @@ namespace Kursach
         public virtual DbSet<v_Dishes_With_Types_View> v_Dishes_With_Types_View { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<v_orders_view> v_orders_view { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

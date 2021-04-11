@@ -114,8 +114,8 @@
             <Label x:Name="lNoty" FontSize="14"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
-            <Button x:Name="btnOrder" Margin="5" Click="btnOrder_Click" >В корзину</Button>
-            <Button x:Name="btnDetails" Margin="5" Content="Подробнее..." HorizontalAlignment="Right"/>
+            <Button x:Name="btnOrder" Style="{DynamicResource ViewsButtons}" Click="btnOrder_Click" Content="В корзину"></Button>
+            <Button x:Name="btnDetails" Style="{DynamicResource ViewsButtons}" Content="Подробнее..." HorizontalAlignment="Right"/>
         </StackPanel>
         <Label x:Name="lPrice" FontSize="18" Grid.Row="1"/>
     </Grid>

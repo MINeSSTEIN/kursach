@@ -95,6 +95,27 @@
           <Property Name="Weight" Type="int" Nullable="false" />
           <Property Name="PicturePath" Type="nvarchar(max)" />
         </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Restraunt_db_temp.dbo.v_orders_view" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="v_orders_view">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Time" />
+            <PropertyRef Name="IsOrdered" />
+            <PropertyRef Name="IsCooking" />
+            <PropertyRef Name="IsCooked" />
+            <PropertyRef Name="IsDelivered" />
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="PicturePath" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="IsOrdered" Type="bit" Nullable="false" />
+          <Property Name="IsCooking" Type="bit" Nullable="false" />
+          <Property Name="IsCooked" Type="bit" Nullable="false" />
+          <Property Name="IsDelivered" Type="bit" Nullable="false" />
+          <Property Name="id" Type="int" Nullable="false" />
+        </EntityType>
         <Association Name="FK_Dishes_Dishes_Type">
           <End Role="Dishes_Type" Type="Self.Dishes_Type" Multiplicity="1" />
           <End Role="Dishes" Type="Self.Dishes" Multiplicity="*" />
@@ -203,6 +224,18 @@
     [v_Dishes_With_Types_View].[Weight] AS [Weight], 
     [v_Dishes_With_Types_View].[PicturePath] AS [PicturePath]
     FROM [dbo].[v_Dishes_With_Types_View] AS [v_Dishes_With_Types_View]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_orders_view" EntityType="Self.v_orders_view" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [v_orders_view].[PicturePath] AS [PicturePath], 
+    [v_orders_view].[Name] AS [Name], 
+    [v_orders_view].[Time] AS [Time], 
+    [v_orders_view].[IsOrdered] AS [IsOrdered], 
+    [v_orders_view].[IsCooking] AS [IsCooking], 
+    [v_orders_view].[IsCooked] AS [IsCooked], 
+    [v_orders_view].[IsDelivered] AS [IsDelivered], 
+    [v_orders_view].[id] AS [id]
+    FROM [dbo].[v_orders_view] AS [v_orders_view]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_Dishes_Dishes_Type" Association="Self.FK_Dishes_Dishes_Type">
             <End Role="Dishes_Type" EntitySet="Dishes_Type" />
@@ -397,6 +430,7 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="v_orders_view" EntityType="Restraunt_DB_Model.v_orders_view" />
         </EntityContainer>
         <EntityType Name="Orders">
           <Key>
@@ -458,6 +492,25 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <EntityType Name="v_orders_view">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Time" />
+            <PropertyRef Name="IsOrdered" />
+            <PropertyRef Name="IsCooking" />
+            <PropertyRef Name="IsCooked" />
+            <PropertyRef Name="IsDelivered" />
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="PicturePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsOrdered" Type="Boolean" Nullable="false" />
+          <Property Name="IsCooking" Type="Boolean" Nullable="false" />
+          <Property Name="IsCooked" Type="Boolean" Nullable="false" />
+          <Property Name="IsDelivered" Type="Boolean" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -580,6 +633,20 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище Restraunt_DB_Model.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище Restraunt_DB_Model.sp_upgraddiagrams" />
+          <EntitySetMapping Name="v_orders_view">
+            <EntityTypeMapping TypeName="Restraunt_DB_Model.v_orders_view">
+              <MappingFragment StoreEntitySet="v_orders_view">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="IsDelivered" ColumnName="IsDelivered" />
+                <ScalarProperty Name="IsCooked" ColumnName="IsCooked" />
+                <ScalarProperty Name="IsCooking" ColumnName="IsCooking" />
+                <ScalarProperty Name="IsOrdered" ColumnName="IsOrdered" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PicturePath" ColumnName="PicturePath" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

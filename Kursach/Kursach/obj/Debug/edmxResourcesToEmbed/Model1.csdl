@@ -168,6 +168,7 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="v_orders_view" EntityType="Restraunt_DB_Model.v_orders_view" />
   </EntityContainer>
   <EntityType Name="Orders">
     <Key>
@@ -229,4 +230,23 @@
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
     <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
+  <EntityType Name="v_orders_view">
+    <Key>
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Time" />
+      <PropertyRef Name="IsOrdered" />
+      <PropertyRef Name="IsCooking" />
+      <PropertyRef Name="IsCooked" />
+      <PropertyRef Name="IsDelivered" />
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="PicturePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IsOrdered" Type="Boolean" Nullable="false" />
+    <Property Name="IsCooking" Type="Boolean" Nullable="false" />
+    <Property Name="IsCooked" Type="Boolean" Nullable="false" />
+    <Property Name="IsDelivered" Type="Boolean" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+  </EntityType>
 </Schema>

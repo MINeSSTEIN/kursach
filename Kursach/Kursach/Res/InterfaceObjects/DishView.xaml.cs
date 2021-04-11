@@ -44,7 +44,7 @@ namespace Kursach.Res.InterfaceObjects
                 Classes.ObjectsVisibility.EntityVision.e.Orders.Add(order);
                 Classes.ObjectsVisibility.EntityVision.e.SaveChanges();
 
-                Notification("Заказ добавлен");
+                Notificate("Заказ добавлен");
             }
             else
             {
@@ -52,16 +52,16 @@ namespace Kursach.Res.InterfaceObjects
             }
         }
 
-        private void Notification(string Message)
+        private void Notificate(string Message)
         {
-            Timer t = new Timer(2000);
+            //Timer t = new Timer(2000);
             lNoty.Content = Message;
-            t.Enabled = true;
+/*            t.Enabled = true;
             while (t.Interval != 2)
             {
             }
             lNoty.Content = "";
-            t.Enabled = false;
+            t.Enabled = false;*/
         }
     }
 }

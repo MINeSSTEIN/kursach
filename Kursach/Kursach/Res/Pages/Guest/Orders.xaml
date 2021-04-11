@@ -9,6 +9,8 @@
       Title="Orders">
 
     <Grid>
-        
+        <WrapPanel x:Name="wpOrders">
+            <Label Content="Список заказов" FontSize="42" Width="4000"/>
+        </WrapPanel>
     </Grid>
 </Page>

@@ -22,11 +22,15 @@ namespace Kursach.Res.Pages.Buttons
     {
         public static Label lNoty;
         public static Button _btnMain;
+        public static Button _btnOrders;
+        public static Button _btnDishes;
         public static Button _btnOld;
         public Buttons_Guest()
         {
             InitializeComponent();
             _btnMain = btnMain;
+            _btnDishes = btnDishes;
+            _btnOrders = btnOrders;
             _btnOld = btnMain;
             lNoty = lNotifier;
 
@@ -46,7 +50,7 @@ namespace Kursach.Res.Pages.Buttons
 
         private void btnOrders_Click(object sender, RoutedEventArgs e)
         {
-
+            Classes.ObjectsVisibility.FrameVision.f.Navigate(new Guest.Orders());
         }
     }
 }
