@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Хранилище Restraunt_DB_Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Хранилище Restraunt_DB_TempModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Dishes">
     <Key>
       <PropertyRef Name="id" />
@@ -55,7 +55,6 @@
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Sorename" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Thirdname" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="CardNumber" Type="nvarchar" MaxLength="16" Nullable="false" />
     <Property Name="Mailing" Type="bit" Nullable="false" />
     <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
@@ -72,6 +71,14 @@
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsersAndCards">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User" Type="int" Nullable="false" />
+    <Property Name="Card" Type="nvarchar" MaxLength="16" Nullable="false" />
   </EntityType>
   <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "Restraunt_db_temp.dbo.v_Dishes_With_Types_View" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
@@ -147,18 +154,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Users_Users_Cards">
-    <End Role="Users_Cards" Type="Self.Users_Cards" Multiplicity="1" />
-    <End Role="Users" Type="Self.Users" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Users_Cards">
-        <PropertyRef Name="Number" />
-      </Principal>
-      <Dependent Role="Users">
-        <PropertyRef Name="CardNumber" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Users_Users_Types">
     <End Role="Users_Types" Type="Self.Users_Types" Multiplicity="1" />
     <End Role="Users" Type="Self.Users" Multiplicity="*" />
@@ -168,6 +163,30 @@
       </Principal>
       <Dependent Role="Users">
         <PropertyRef Name="Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsersAndCards_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UsersAndCards" Type="Self.UsersAndCards" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="UsersAndCards">
+        <PropertyRef Name="User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsersAndCards_Users_Cards">
+    <End Role="Users_Cards" Type="Self.Users_Cards" Multiplicity="1" />
+    <End Role="UsersAndCards" Type="Self.UsersAndCards" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users_Cards">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="UsersAndCards">
+        <PropertyRef Name="Card" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -202,7 +221,7 @@
     <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <EntityContainer Name="Хранилище Restraunt_DB_ModelContainer">
+  <EntityContainer Name="Хранилище Restraunt_DB_TempModelContainer">
     <EntitySet Name="Dishes" EntityType="Self.Dishes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Dishes_Type" EntityType="Self.Dishes_Type" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
@@ -210,6 +229,7 @@
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users_Cards" EntityType="Self.Users_Cards" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users_Types" EntityType="Self.Users_Types" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsersAndCards" EntityType="Self.UsersAndCards" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="v_Dishes_With_Types_View" EntityType="Self.v_Dishes_With_Types_View" store:Type="Views" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [v_Dishes_With_Types_View].[id] AS [id], 
@@ -244,13 +264,17 @@
       <End Role="Users" EntitySet="Users" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="FK_Users_Users_Cards" Association="Self.FK_Users_Users_Cards">
-      <End Role="Users_Cards" EntitySet="Users_Cards" />
-      <End Role="Users" EntitySet="Users" />
-    </AssociationSet>
     <AssociationSet Name="FK_Users_Users_Types" Association="Self.FK_Users_Users_Types">
       <End Role="Users_Types" EntitySet="Users_Types" />
       <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsersAndCards_Users" Association="Self.FK_UsersAndCards_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UsersAndCards" EntitySet="UsersAndCards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsersAndCards_Users_Cards" Association="Self.FK_UsersAndCards_Users_Cards">
+      <End Role="Users_Cards" EntitySet="Users_Cards" />
+      <End Role="UsersAndCards" EntitySet="UsersAndCards" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -12,18 +12,13 @@ namespace Kursach
     using System;
     using System.Collections.Generic;
     
-    public partial class Users_Cards
+    public partial class UsersAndCards
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Users_Cards()
-        {
-            this.UsersAndCards = new HashSet<UsersAndCards>();
-        }
+        public int id { get; set; }
+        public int User { get; set; }
+        public string Card { get; set; }
     
-        public string Number { get; set; }
-        public string CVV_CVC { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<UsersAndCards> UsersAndCards { get; set; }
+        public virtual Users Users { get; set; }
+        public virtual Users_Cards Users_Cards { get; set; }
     }
 }

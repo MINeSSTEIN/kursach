@@ -154,6 +154,9 @@
     <Compile Include="Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="UsersAndCards.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Users_Cards.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

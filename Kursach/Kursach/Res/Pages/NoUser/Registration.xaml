@@ -19,19 +19,19 @@
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
                     <StackPanel x:Name="labels" Orientation="Vertical">
-                        <Label Content="Email"/>
-                        <Label Content="Подтвердить Email"/>
-                        <Label Content="Дата рождения"/>
-                        <Label Content="Имя"/>
-                        <Label Content="Фамилия"/>
-                        <Label Content="Отчество"/>
-                        <Label Content="Телефон"/>
-                        <Label Content="Пароль"/>
-                        <Label Content="Повторить пароль"/>
-                        <Button x:Name="btnRegistration" Content="Регистрация" HorizontalAlignment="Center"/>
+                        <Label Content="Email" Style="{DynamicResource RegLabels}"/>
+                        <Label Content="Подтвердить Email" Style="{DynamicResource RegLabels}"/>
+                        <Label Content="Дата рождения" Style="{DynamicResource RegLabels}" Margin="0,0,0,5"/>
+                        <Label Content="Имя" Style="{DynamicResource RegLabels}"/>
+                        <Label Content="Фамилия" Style="{DynamicResource RegLabels}"/>
+                        <Label Content="Отчество" Style="{DynamicResource RegLabels}"/>
+                        <Label Content="Телефон" Style="{DynamicResource RegLabels}"/>
+                        <Label Content="Пароль" Style="{DynamicResource RegLabels}"/>
+                        <Label Content="Повторить пароль" Style="{DynamicResource RegLabels}"/>
+                        <Button x:Name="btnRegistration" Click="btnRegistration_Click" Content="Регистрация" HorizontalAlignment="Center" Style="{DynamicResource ViewsButtons}"/>
                     </StackPanel>
                     <StackPanel x:Name="tbs" Orientation="Vertical">
-                        <e:MaskedTextBox x:Name="mtbEmail" Width="200" Margin="5"/>
+                        <e:MaskedTextBox x:Name="mtbEmail" Width="200" Margin="5,5,5,5"/>
                         <e:MaskedTextBox x:Name="mtbEmailConfirm" Width="200" Margin="5"/>
                         <StackPanel Orientation="Horizontal">
                             <ComboBox x:Name="cbDate" Width="40" Margin="5,3,3,5"/>
@@ -44,9 +44,14 @@
                         <e:MaskedTextBox x:Name="mtbTelephone" Width="200" Margin="5"/>
                         <PasswordBox x:Name="pbPassword" Width="200" Margin="5"/>
                         <PasswordBox x:Name="pbPasswordConfirm" Width="200" Margin="5"/>
-                        <Button x:Name="btnLogin" Content="Уже есть аккаунт?" HorizontalAlignment="Center"/>
-                    </StackPanel> 
+                        <CheckBox x:Name="IsSubscribed" Content="Подписаться на рассылку новостей"/>
+
+                        <Button x:Name="btnLogin" Click="btnLogin_Click" Content="Уже есть аккаунт?" HorizontalAlignment="Center" Style="{DynamicResource ViewsButtons}"/>
+
+                    </StackPanel>
+
                 </StackPanel>
+                
             </Grid>
         </UserControl>
     </Grid>

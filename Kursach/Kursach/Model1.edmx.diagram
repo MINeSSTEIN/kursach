@@ -4,21 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1da71df4ce9c4c6f99e5dff296fa32b9" Name="Diagram1">
-        <EntityTypeShape EntityType="Restraunt_DB_Model.Dishes" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Restraunt_DB_Model.Dishes_Type" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="Restraunt_DB_Model.Users" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="Restraunt_DB_Model.Users_Cards" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Restraunt_DB_Model.Users_Types" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="Restraunt_DB_Model.v_Dishes_With_Types_View" Width="1.5" PointX="11.625" PointY="4.875" IsExpanded="true" />
-        <AssociationConnector Association="Restraunt_DB_Model.FK_Dishes_Dishes_Type" ManuallyRouted="false" />
-        <AssociationConnector Association="Restraunt_DB_Model.FK_Users_Users_Cards" ManuallyRouted="false" />
-        <AssociationConnector Association="Restraunt_DB_Model.FK_Users_Users_Types" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="Restraunt_DB_Model.Orders" Width="1.5" PointX="10.25" PointY="1.5" />
-        <EntityTypeShape EntityType="Restraunt_DB_Model.sysdiagrams" Width="1.5" PointX="5.375" PointY="4.75" />
-        <AssociationConnector Association="Restraunt_DB_Model.FK_Orders_Dishes" />
-        <AssociationConnector Association="Restraunt_DB_Model.FK_Orders_Users" />
-        <EntityTypeShape EntityType="Restraunt_DB_Model.v_orders_view" Width="1.5" PointX="10" PointY="4.75" />
+      <Diagram DiagramId="cc4f8fbaa5224aa2877a5f4d1f326522" Name="Diagram1">
+        <EntityTypeShape EntityType="Restraunt_DB_TempModel.Dishes" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restraunt_DB_TempModel.Dishes_Type" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restraunt_DB_TempModel.Orders" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restraunt_DB_TempModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restraunt_DB_TempModel.Users" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restraunt_DB_TempModel.Users_Cards" Width="1.5" PointX="6" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restraunt_DB_TempModel.Users_Types" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restraunt_DB_TempModel.UsersAndCards" Width="1.5" PointX="8.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restraunt_DB_TempModel.v_Dishes_With_Types_View" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Restraunt_DB_TempModel.v_orders_view" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="Restraunt_DB_TempModel.FK_Dishes_Dishes_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="Restraunt_DB_TempModel.FK_Orders_Dishes" ManuallyRouted="false" />
+        <AssociationConnector Association="Restraunt_DB_TempModel.FK_Orders_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Restraunt_DB_TempModel.FK_Users_Users_Types" ManuallyRouted="false" />
+        <AssociationConnector Association="Restraunt_DB_TempModel.FK_UsersAndCards_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Restraunt_DB_TempModel.FK_UsersAndCards_Users_Cards" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Kursach.Res.Classes.ObjectsVisibility;
+using System.Data.Entity;
 
 namespace Kursach.Res.Pages.NoUser
 {
@@ -220,6 +222,65 @@ namespace Kursach.Res.Pages.NoUser
             {
                 FillcbD();
             }
+        }
+
+        private void btnRegistration_Click(object sender, RoutedEventArgs e)
+        {
+            Registrate();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            FrameVision.f.Navigate(new Login());
+        }
+
+        private void Registrate()
+        {
+            if(pbPassword.Password != pbPasswordConfirm.Password)
+            {
+                MessageBox.Show("Пароли не совпадают.");
+            }
+            else if(EntityVision.e.Users.Count(x => x.Telephone == mtbTelephone.Text) > 0)
+            {
+                MessageBox.Show("Такой телефон уже зарегестрирован.");
+            }
+            if (mtbEmail.Text != mtbEmailConfirm.Text)
+            {
+                MessageBox.Show("Почты не совпадают.");
+            }
+            else
+            {
+                try
+                {
+                    Users usr = new Users()
+                    {
+                        Type = 1,
+                        Telephone = mtbTelephone.Text,
+                        BirthDate = PickBirthDate(),
+                        RegDate = DateTime.Now,
+                        Email = mtbEmail.Text,
+                        Name = mtbName.Text,
+                        Sorename = mtbSurename.Text,
+                        Thirdname = mtbThirdname.Text,
+                        Mailing = IsSubscribed.IsEnabled,
+                        Password = pbPassword.Password
+                    };
+                    EntityVision.e.Users.Add(usr);
+                    EntityVision.e.SaveChanges();
+                    MessageBox.Show("Пользователь создан");
+                    FrameVision.f.Navigate(new Login());
+                }
+                catch (Exception a)
+                {
+                    MessageBox.Show(a.ToString());
+                }
+            }
+        }
+
+        private DateTime PickBirthDate()
+        {
+            DateTime date = new DateTime(Convert.ToInt32(cbYear.SelectedItem), cbMonth.SelectedIndex + 1, Convert.ToInt32(cbDate.SelectedItem));
+            return date;
         }
     }
 }

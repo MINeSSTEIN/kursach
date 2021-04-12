@@ -30,5 +30,7 @@
                 Grid.Column="1" Grid.Row="1"
                 Style="{DynamicResource ViewsButtons}"
                 Content="Оплатить один"/>
+
+        <Label x:Name="lConditionIndicator"/>
     </Grid>
 </UserControl>
