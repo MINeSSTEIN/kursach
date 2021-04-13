@@ -30,7 +30,9 @@
                 Grid.Column="1" Grid.Row="1"
                 Style="{DynamicResource ViewsButtons}"
                 Content="Оплатить один"/>
-
-        <Label x:Name="lConditionIndicator"/>
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+            <Label x:Name="lName" Content="EMPTY"/>
+            <Label x:Name="lConditionIndicator" Content="EMPTY" FontSize="11"/>
+        </StackPanel>
     </Grid>
 </UserControl>

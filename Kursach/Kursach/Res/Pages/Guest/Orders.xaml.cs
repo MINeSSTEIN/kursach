@@ -53,6 +53,8 @@ namespace Kursach.Res.Pages.Guest
                     bm.UriSource = new Uri(System.IO.Directory.GetCurrentDirectory() + EntityVision.e.v_orders_view.Local[i].PicturePath);
                     bm.EndInit();
                     ovTemp.iImage.Source = bm;
+                    ovTemp.lConditionIndicator.Content = "Не оплачен";
+                    ovTemp.lName.Content = EntityVision.e.v_orders_view.Local[i].Name;
                     wpOrders.Children.Add(ovTemp);
                 }
                 catch { }

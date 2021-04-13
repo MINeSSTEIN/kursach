@@ -115,3 +115,9 @@ C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceO
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\Guest\Orders.g.cs
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\OrderView.baml
 C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\Res\Pages\Guest\Orders.baml
+C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\OrderView.g.cs
+C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\Pages\Guest\Orders.g.cs
+C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\InterfaceObjects\OrderView.baml
+C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\Pages\Guest\Orders.baml
+C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\Pages\Cook\DishesUncookedList.g.cs
+C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\Res\Pages\Cook\DishesUncookedList.baml

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\obj\Debug\
+C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\obj\Debug\
 Kursach
 none
 false
 DEBUG;TRACE
-C:\Users\mines\Documents\GitHub\kursach\Kursach\Kursach\App.xaml
-111528859576
+C:\Users\Администратор\Documents\Шабалкин\kur\Kursach\Kursach\App.xaml
+121289043864
 21750853300
-36-2003512261
-25-1187793123
-MainWindow.xaml;Res\InterfaceObjects\DishView.xaml;Res\InterfaceObjects\OrderView.xaml;Res\Pages\Buttons\ButtonsNoUser.xaml;Res\Pages\Buttons\Buttons_Guest.xaml;Res\Pages\Guest\Main.xaml;Res\Pages\Guest\Orders.xaml;Res\Pages\NoUser\DishesBrowser.xaml;Res\Pages\NoUser\Login.xaml;Res\Pages\NoUser\Main.xaml;Res\Pages\NoUser\Registration.xaml;
+371525146905
+251698731578
+MainWindow.xaml;Res\InterfaceObjects\DishView.xaml;Res\InterfaceObjects\OrderView.xaml;Res\Pages\Buttons\ButtonsNoUser.xaml;Res\Pages\Buttons\Buttons_Guest.xaml;Res\Pages\Cook\DishesUncookedList.xaml;Res\Pages\Guest\Main.xaml;Res\Pages\Guest\Orders.xaml;Res\Pages\NoUser\DishesBrowser.xaml;Res\Pages\NoUser\Login.xaml;Res\Pages\NoUser\Main.xaml;Res\Pages\NoUser\Registration.xaml;
 
 False
 

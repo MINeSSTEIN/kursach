@@ -124,6 +124,9 @@
     <Compile Include="Res\Pages\Buttons\Buttons_Guest.xaml.cs">
       <DependentUpon>Buttons_Guest.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Res\Pages\Cook\DishesUncookedList.xaml.cs">
+      <DependentUpon>DishesUncookedList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Res\Pages\Guest\Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
@@ -194,6 +197,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Res\Pages\Buttons\Buttons_Guest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Res\Pages\Cook\DishesUncookedList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
