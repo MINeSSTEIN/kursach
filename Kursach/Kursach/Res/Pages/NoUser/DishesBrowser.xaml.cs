@@ -44,8 +44,12 @@ namespace Kursach.Res.Pages.NoUser
 
         private void LoadDishesDataFromDB()
         {
-            Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Load();//Загружаем таблицу с блюдами из базы данных
-            nota.ItemsSource = Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Local.ToBindingList(); //Таки пихаем данные из таблицы в таблицу (хвахывхаыва)
+            try
+            {
+                Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Load();//Загружаем таблицу с блюдами из базы данных
+                nota.ItemsSource = Classes.ObjectsVisibility.EntityVision.e.v_Dishes_With_Types_View.Local.ToBindingList(); //Таки пихаем данные из таблицы в таблицу (хвахывхаыва)
+            }
+            catch { }
         }
 
         private void LoadDishesToViews()

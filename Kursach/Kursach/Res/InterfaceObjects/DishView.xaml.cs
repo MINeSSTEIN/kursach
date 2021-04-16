@@ -32,14 +32,16 @@ namespace Kursach.Res.InterfaceObjects
         {
             if (Classes.ObjectsVisibility.CurrentUserInfo.type == 1)
             {
-                var order = new Orders();
-                order.dish_id = id;
-                order.user_id = Classes.ObjectsVisibility.CurrentUserInfo.id;
-                order.Time = DateTime.Now;
-                order.IsOrdered = false;
-                order.IsCooking = false;
-                order.IsCooked = false;
-                order.IsDelivered = false;
+                var order = new Orders
+                {
+                    dish_id = id,
+                    user_id = Classes.ObjectsVisibility.CurrentUserInfo.id,
+                    Time = DateTime.Now,
+                    IsOrdered = false,
+                    IsCooking = false,
+                    IsCooked = false,
+                    IsDelivered = false
+                };
 
                 Classes.ObjectsVisibility.EntityVision.e.Orders.Add(order);
                 Classes.ObjectsVisibility.EntityVision.e.SaveChanges();
@@ -56,12 +58,12 @@ namespace Kursach.Res.InterfaceObjects
         {
             //Timer t = new Timer(2000);
             lNoty.Content = Message;
-/*            t.Enabled = true;
-            while (t.Interval != 2)
-            {
-            }
-            lNoty.Content = "";
-            t.Enabled = false;*/
+            /*            t.Enabled = true;
+                        while (t.Interval != 2)
+                        {
+                        }
+                        lNoty.Content = "";
+                        t.Enabled = false;*/
         }
     }
 }

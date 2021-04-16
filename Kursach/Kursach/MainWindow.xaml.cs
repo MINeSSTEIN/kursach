@@ -18,7 +18,7 @@ namespace Kursach
             FrameVision.f.Navigate(new Res.Pages.NoUser.Main());
             btnsFrameVision.f.Navigate(new Res.Pages.Buttons.ButtonsNoUser());
 
-
+            Res.Pages.Guest.OrdersPageHolder.p = new Res.Pages.Guest.Orders(); 
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

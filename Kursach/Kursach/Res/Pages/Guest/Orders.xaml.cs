@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -23,6 +24,8 @@ namespace Kursach.Res.Pages.Guest
     /// </summary>
     public partial class Orders : Page
     {
+        public static WrapPanel wpOrdersVisible;
+
         DataGrid dgOrders = new DataGrid();
         public Orders()
         {
@@ -31,15 +34,20 @@ namespace Kursach.Res.Pages.Guest
             LoadOrdersToTable();
 
             LoadOrders();
-
-
         }
 
         private void LoadOrdersToTable()
         {
-            EntityVision.e.v_orders_view.Load();
-            dgOrders.ItemsSource = EntityVision.e.v_orders_view.Local.ToBindingList();
+            try
+            {
+                EntityVision.e.v_orders_view.Load();
+                dgOrders.ItemsSource = EntityVision.e.v_orders_view.Local.ToBindingList();
+                wpOrdersVisible = wpOrders;
+            }
+            catch { }
         }
+
+        
         
         private void LoadOrders()
         {
@@ -55,6 +63,7 @@ namespace Kursach.Res.Pages.Guest
                     ovTemp.iImage.Source = bm;
                     ovTemp.lConditionIndicator.Content = "Не оплачен";
                     ovTemp.lName.Content = EntityVision.e.v_orders_view.Local[i].Name;
+                    ovTemp.id = EntityVision.e.v_orders_view.Local[i].id;
                     wpOrders.Children.Add(ovTemp);
                 }
                 catch { }

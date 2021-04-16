@@ -13,6 +13,9 @@
             <WrapPanel x:Name="wpDishes">
                 <Label Content="Список блюд" FontSize="42" Width="4000"/>
             </WrapPanel>
+            <StackPanel>
+                <Button Content="Oбновить"/>
+            </StackPanel>
         </ScrollViewer> 
     </Grid>
 </Page>

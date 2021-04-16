@@ -133,6 +133,7 @@
     <Compile Include="Res\Pages\Guest\Orders.xaml.cs">
       <DependentUpon>Orders.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Res\Pages\Guest\OrdersPageHolder.cs" />
     <Compile Include="Res\Pages\NoUser\DishesBrowser.xaml.cs">
       <DependentUpon>DishesBrowser.xaml</DependentUpon>
     </Compile>

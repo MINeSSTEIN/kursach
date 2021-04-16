@@ -50,7 +50,7 @@ namespace Kursach.Res.Pages.Buttons
 
         private void btnOrders_Click(object sender, RoutedEventArgs e)
         {
-            Classes.ObjectsVisibility.FrameVision.f.Navigate(new Guest.Orders());
+            Classes.ObjectsVisibility.FrameVision.f.Navigate(Guest.OrdersPageHolder.p);
         }
     }
 }

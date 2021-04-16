@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Kursach.Res.Classes.ObjectsVisibility;
+using System.Data.Entity;
 
 namespace Kursach.Res.InterfaceObjects
 {
@@ -20,6 +22,7 @@ namespace Kursach.Res.InterfaceObjects
     /// </summary>
     public partial class OrderView : UserControl
     {
+        public int id;
         public OrderView()
         {
             InitializeComponent();
@@ -27,6 +30,13 @@ namespace Kursach.Res.InterfaceObjects
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            Task t = Task.Factory.StartNew(() =>
+            {
+                EntityVision.e.Orders.Remove(EntityVision.e.Orders.Find(id));
+                EntityVision.e.SaveChanges();
+
+                Pages.Guest.Orders.wpOrdersVisible.Children.Remove(this);
+            });
 
         }
 
