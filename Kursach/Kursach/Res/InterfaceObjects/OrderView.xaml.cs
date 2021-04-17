@@ -30,19 +30,17 @@ namespace Kursach.Res.InterfaceObjects
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-            Task t = Task.Factory.StartNew(() =>
-            {
-                EntityVision.e.Orders.Remove(EntityVision.e.Orders.Find(id));
-                EntityVision.e.SaveChanges();
+            EntityVision.e.Orders.Remove(EntityVision.e.Orders.Find(id));
+            EntityVision.e.SaveChanges();
 
-                Pages.Guest.Orders.wpOrdersVisible.Children.Remove(this);
-            });
-
+            Pages.Guest.Orders.wpOrdersVisible.Children.Remove(this);
         }
 
-        private void btnPay_Click(object sender, RoutedEventArgs e)
+        public void btnPay_Click(object sender, RoutedEventArgs e)
         {
-
+            lConditionIndicator.Content = "Оплачено, готовится";
+            btnCancel.IsEnabled = false;
+            btnPay.IsEnabled = false;
         }
     }
 }
