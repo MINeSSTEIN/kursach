@@ -451,6 +451,11 @@
                                 <Setter Property="Background" TargetName="border" Value="#eff3e1"/>
                                 <Setter Property="Foreground" Value="Black"/>
                             </Trigger>
+
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="LightGray"/>
+                                <Setter Property="Foreground" Value="gray"/>
+                            </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>

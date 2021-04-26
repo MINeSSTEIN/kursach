@@ -69,5 +69,17 @@ namespace Kursach.Res.Pages.Guest
                 catch { }
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            wpOrders.Children.Clear();
+            LoadOrdersToTable();
+            LoadOrders();
+        }
+
+        private void btnPayAll_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -9,8 +9,16 @@
       Title="Orders">
 
     <Grid>
-        <WrapPanel x:Name="wpOrders">
-            <Label Content="Список заказов" FontSize="42" Width="4000"/>
-        </WrapPanel>
+        <ScrollViewer>
+            <Grid>
+                <WrapPanel x:Name="wpOrders">
+                    <Label Content="Список заказов" FontSize="42" Width="4000"/>
+                </WrapPanel>
+                <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal">
+                    <Button x:Name="btnUpdate" Content="Oбновить" Style="{DynamicResource ViewsButtons}" Click="Button_Click"/>
+                    <Button Content="Оплатить все" Style="{DynamicResource ViewsButtons}" x:Name="btnPayAll" Click="btnPayAll_Click"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>
