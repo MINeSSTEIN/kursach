@@ -56,14 +56,7 @@ namespace Kursach.Res.InterfaceObjects
 
         private void Notificate(string Message)
         {
-            //Timer t = new Timer(2000);
             lNoty.Content = Message;
-            /*            t.Enabled = true;
-                        while (t.Interval != 2)
-                        {
-                        }
-                        lNoty.Content = "";
-                        t.Enabled = false;*/
         }
     }
 }
